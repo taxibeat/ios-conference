@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +21,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleCopy10" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-HZ-wyu">
+                                <rect key="frame" x="0.0" y="565" width="48.5" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="TCc-ZS-9vO"/>
+                                    <constraint firstAttribute="width" constant="48.600000000000001" id="f5p-ry-ReX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group3" translatesAutoresizingMaskIntoConstraints="NO" id="7U7-3T-5QB">
+                                <rect key="frame" x="0.0" y="4" width="157" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="ch6-JM-NUk"/>
+                                    <constraint firstAttribute="width" constant="157" id="fYy-NC-yTU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group4" translatesAutoresizingMaskIntoConstraints="NO" id="iJb-97-IP8">
+                                <rect key="frame" x="278" y="73" width="97" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="1Y6-rg-9fT"/>
+                                    <constraint firstAttribute="height" constant="123" id="xHd-O6-fEX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group2" translatesAutoresizingMaskIntoConstraints="NO" id="MWI-db-rku">
+                                <rect key="frame" x="41" y="177" width="292" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="Ewj-aG-BKN"/>
+                                    <constraint firstAttribute="height" constant="123" id="zOo-Yz-Lll"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="IS4-HZ-wyu" secondAttribute="bottom" constant="43" id="3ZQ-Bg-ggE"/>
+                            <constraint firstItem="MWI-db-rku" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-95" id="5MU-Ih-sVa"/>
+                            <constraint firstItem="7U7-3T-5QB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NKB-u6-kTg"/>
+                            <constraint firstItem="IS4-HZ-wyu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Vav-UL-HR8"/>
+                            <constraint firstItem="iJb-97-IP8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="73" id="XY0-2Z-fLo"/>
+                            <constraint firstItem="MWI-db-rku" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oWO-iu-Pdo"/>
+                            <constraint firstAttribute="trailing" secondItem="iJb-97-IP8" secondAttribute="trailing" id="tXJ-Zs-WLa"/>
+                            <constraint firstItem="7U7-3T-5QB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="4" id="urc-dL-1BS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +69,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="group2" width="300" height="148"/>
+        <image name="group3" width="177" height="178"/>
+        <image name="group4" width="97" height="148"/>
+        <image name="rectangleCopy10" width="49" height="57"/>
+    </resources>
 </document>

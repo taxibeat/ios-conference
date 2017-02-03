@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
+		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
+		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
+		F67E529C1E451B04004518B6 /* taxibeat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67E529B1E451B04004518B6 /* taxibeat.ttf */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
 		F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */; };
 		F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
+		F67E529B1E451B04004518B6 /* taxibeat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = taxibeat.ttf; sourceTree = "<group>"; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F67E52951E451823004518B6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F67E52961E451835004518B6 /* GradientView.swift */,
+				F67E52981E45188F004518B6 /* ConstraintsHandler.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F67E529A1E451AF3004518B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F67E529B1E451B04004518B6 /* taxibeat.ttf */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		F6AA7F351E43B8CC007C55E0 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,8 @@
 		F6AA7F401E43B8CC007C55E0 /* iOSConf */ = {
 			isa = PBXGroup;
 			children = (
+				F67E529A1E451AF3004518B6 /* Assets */,
+				F67E52951E451823004518B6 /* Helpers */,
 				F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */,
 				F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */,
 				F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */,
@@ -106,6 +133,7 @@
 				F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */,
 				F6AA7F4C1E43B8CC007C55E0 /* LaunchScreen.storyboard */,
 				F6AA7F4F1E43B8CC007C55E0 /* Info.plist */,
+				F67E52931E4515BC004518B6 /* LaunchViewController.swift */,
 			);
 			path = iOSConf;
 			sourceTree = "<group>";
@@ -240,6 +268,7 @@
 			files = (
 				F6AA7F4E1E43B8CC007C55E0 /* LaunchScreen.storyboard in Resources */,
 				F6AA7F4B1E43B8CC007C55E0 /* Assets.xcassets in Resources */,
+				F67E529C1E451B04004518B6 /* taxibeat.ttf in Resources */,
 				F6AA7F491E43B8CC007C55E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +296,10 @@
 			files = (
 				F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */,
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
+				F67E52971E451835004518B6 /* GradientView.swift in Sources */,
+				F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */,
 				F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */,
+				F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +548,7 @@
 				F6AA7F6A1E43B8CD007C55E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6AA7F6B1E43B8CD007C55E0 /* Build configuration list for PBXNativeTarget "iOSConfTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +557,7 @@
 				F6AA7F6D1E43B8CD007C55E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6AA7F6E1E43B8CD007C55E0 /* Build configuration list for PBXNativeTarget "iOSConfUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +566,7 @@
 				F6AA7F701E43B8CD007C55E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

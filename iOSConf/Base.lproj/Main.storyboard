@@ -203,6 +203,9 @@
                                 <state key="normal" title="Enter the magic">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ExG-GC-cUd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,7 +233,6 @@
                     </view>
                     <connections>
                         <outlet property="magicButton" destination="FKn-4U-U9i" id="qGA-A2-ERS"/>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="showTabbarSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="LFb-Pb-IQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjD-ZW-SAu" userLabel="First Responder" sceneMemberID="firstResponder"/>

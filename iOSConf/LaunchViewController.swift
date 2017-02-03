@@ -38,11 +38,12 @@ class LaunchViewController: UIViewController {
         gradient.translatesAutoresizingMaskIntoConstraints = false
         gradient.setHorizontalGradientLayer(#colorLiteral(red: 0.1019607843, green: 0.07058823529, blue: 0.6156862745, alpha: 1), endColor: #colorLiteral(red: 0.02352941176, green: 0.7843137255, blue: 0.8745098039, alpha: 1))
         gradient.layer.cornerRadius = 10.0
+        gradient.isUserInteractionEnabled = false
         self.magicButton.insertSubview(gradient, at: 0)
         ConstraintsHandler.constrain(view: self.magicButton, toView: gradient)
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -50,6 +51,6 @@ class LaunchViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

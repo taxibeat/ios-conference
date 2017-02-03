@@ -10,10 +10,13 @@ import UIKit
 
 class LaunchViewController: UIViewController {
 
+    @IBOutlet weak var magicButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupGradient()
+        styleMagicButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +32,15 @@ class LaunchViewController: UIViewController {
         ConstraintsHandler.constrain(view: self.view, toView: gradient)
     }
     
+    func styleMagicButton() {
+        self.magicButton.layer.cornerRadius = 10.0
+        let gradient = GradientView()
+        gradient.translatesAutoresizingMaskIntoConstraints = false
+        gradient.setHorizontalGradientLayer(#colorLiteral(red: 0.1019607843, green: 0.07058823529, blue: 0.6156862745, alpha: 1), endColor: #colorLiteral(red: 0.02352941176, green: 0.7843137255, blue: 0.8745098039, alpha: 1))
+        gradient.layer.cornerRadius = 10.0
+        self.magicButton.insertSubview(gradient, at: 0)
+        ConstraintsHandler.constrain(view: self.magicButton, toView: gradient)
+    }
 
     /*
     // MARK: - Navigation

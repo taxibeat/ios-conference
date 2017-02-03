@@ -32,5 +32,12 @@ class GradientView: UIView {
         let glayer = self.layer as! CAGradientLayer
         glayer.colors = [startColor.cgColor, endColor.cgColor]
     }
+    
+    func setHorizontalGradientLayer(_ startColor:UIColor, endColor:UIColor) {
+        let glayer = self.layer as! CAGradientLayer
+        glayer.colors = [startColor.cgColor, endColor.cgColor]
+        glayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        glayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+    }
 
 }

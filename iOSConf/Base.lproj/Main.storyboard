@@ -193,10 +193,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKn-4U-U9i">
+                                <rect key="frame" x="24" y="595" width="327" height="48"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.78431372549019607" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Ps9-FV-pDr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Enter the magic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="R0f-DY-zki" firstAttribute="centerX" secondItem="zTg-fd-H1K" secondAttribute="centerX" id="8JR-yy-XwQ"/>
+                            <constraint firstAttribute="trailing" secondItem="FKn-4U-U9i" secondAttribute="trailing" constant="24" id="8f5-NT-lw7"/>
                             <constraint firstItem="0l3-Sg-KcQ" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="73" id="AqO-WI-xxI"/>
                             <constraint firstItem="Vve-0a-C1B" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="4" id="BXQ-NA-emR"/>
                             <constraint firstItem="bMA-dH-pQu" firstAttribute="centerY" secondItem="zTg-fd-H1K" secondAttribute="centerY" constant="120" id="DT2-ha-99W"/>
@@ -207,14 +219,17 @@
                             <constraint firstItem="1MX-Ep-ElT" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" id="fTT-xA-u1p"/>
                             <constraint firstAttribute="trailing" secondItem="0l3-Sg-KcQ" secondAttribute="trailing" id="gyo-mU-Mzs"/>
                             <constraint firstAttribute="bottomMargin" secondItem="1MX-Ep-ElT" secondAttribute="bottom" constant="43" id="lWK-oM-Cbc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FKn-4U-U9i" secondAttribute="bottom" constant="24" id="mCN-sD-Bfd"/>
                             <constraint firstItem="Vve-0a-C1B" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" id="qv0-9K-OLL"/>
                             <constraint firstItem="gOE-t4-S4m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zTg-fd-H1K" secondAttribute="leading" constant="30" id="rZM-xT-tWt"/>
+                            <constraint firstItem="FKn-4U-U9i" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" constant="24" id="skK-bT-lJX"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gOE-t4-S4m" secondAttribute="trailing" constant="30" id="t9Q-6g-jwQ"/>
                             <constraint firstItem="sOM-kJ-Zt1" firstAttribute="centerX" secondItem="R0f-DY-zki" secondAttribute="centerX" id="veW-4V-uvI"/>
                             <constraint firstItem="R0f-DY-zki" firstAttribute="centerY" secondItem="zTg-fd-H1K" secondAttribute="centerY" constant="-100" id="xEF-QI-G56"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="magicButton" destination="FKn-4U-U9i" id="qGA-A2-ERS"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="showTabbarSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="LFb-Pb-IQO"/>
                     </connections>
                 </viewController>

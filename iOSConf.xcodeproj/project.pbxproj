@@ -12,6 +12,7 @@
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
 		F67E529C1E451B04004518B6 /* taxibeat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67E529B1E451B04004518B6 /* taxibeat.ttf */; };
 		F67E52A01E452075004518B6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E529F1E452075004518B6 /* CloudKit.framework */; };
+		F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52A11E4536D0004518B6 /* ConferenceViewController.swift */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
 		F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */; };
 		F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */; };
@@ -46,6 +47,7 @@
 		F67E529B1E451B04004518B6 /* taxibeat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = taxibeat.ttf; sourceTree = "<group>"; };
 		F67E529D1E45206A004518B6 /* iOSConf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSConf.entitlements; sourceTree = "<group>"; };
 		F67E529F1E452075004518B6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		F67E52A11E4536D0004518B6 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -143,11 +145,12 @@
 				F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */,
 				F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */,
 				F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */,
+				F67E52931E4515BC004518B6 /* LaunchViewController.swift */,
+				F67E52A11E4536D0004518B6 /* ConferenceViewController.swift */,
 				F6AA7F471E43B8CC007C55E0 /* Main.storyboard */,
 				F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */,
 				F6AA7F4C1E43B8CC007C55E0 /* LaunchScreen.storyboard */,
 				F6AA7F4F1E43B8CC007C55E0 /* Info.plist */,
-				F67E52931E4515BC004518B6 /* LaunchViewController.swift */,
 			);
 			path = iOSConf;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
 				F67E52971E451835004518B6 /* GradientView.swift in Sources */,
 				F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */,
+				F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */,
 				F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */,
 				F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */,
 			);

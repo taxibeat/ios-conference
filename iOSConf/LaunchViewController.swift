@@ -8,28 +8,19 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+class LaunchViewController: ConferenceViewController {
 
-    @IBOutlet weak var magicButton: UIButton!
+    @IBOutlet private weak var magicButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupGradient()
         styleMagicButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func setupGradient() {
-        let gradient = GradientView()
-        gradient.translatesAutoresizingMaskIntoConstraints = false
-        gradient.setGradientLayer(#colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9568627451, alpha: 1), endColor: #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1))
-        self.view.insertSubview(gradient, at: 0)
-        ConstraintsHandler.constrain(view: self.view, toView: gradient)
     }
     
     func styleMagicButton() {

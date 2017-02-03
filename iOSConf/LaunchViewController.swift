@@ -12,6 +12,9 @@ class LaunchViewController: ConferenceViewController {
 
     @IBOutlet private weak var magicButton: UIButton!
     
+    
+    // MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,9 @@ class LaunchViewController: ConferenceViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: Button styling
     
     func styleMagicButton() {
         self.magicButton.layer.cornerRadius = 10.0

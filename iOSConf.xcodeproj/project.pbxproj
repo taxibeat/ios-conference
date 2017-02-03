@@ -11,6 +11,7 @@
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
 		F67E529C1E451B04004518B6 /* taxibeat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67E529B1E451B04004518B6 /* taxibeat.ttf */; };
+		F67E52A01E452075004518B6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E529F1E452075004518B6 /* CloudKit.framework */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
 		F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */; };
 		F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */; };
@@ -43,6 +44,8 @@
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
 		F67E529B1E451B04004518B6 /* taxibeat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = taxibeat.ttf; sourceTree = "<group>"; };
+		F67E529D1E45206A004518B6 /* iOSConf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSConf.entitlements; sourceTree = "<group>"; };
+		F67E529F1E452075004518B6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67E52A01E452075004518B6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,14 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		F67E529E1E452075004518B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F67E529F1E452075004518B6 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6AA7F351E43B8CC007C55E0 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 				F6AA7F571E43B8CD007C55E0 /* iOSConfTests */,
 				F6AA7F621E43B8CD007C55E0 /* iOSConfUITests */,
 				F6AA7F3F1E43B8CC007C55E0 /* Products */,
+				F67E529E1E452075004518B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +137,7 @@
 		F6AA7F401E43B8CC007C55E0 /* iOSConf */ = {
 			isa = PBXGroup;
 			children = (
+				F67E529D1E45206A004518B6 /* iOSConf.entitlements */,
 				F67E529A1E451AF3004518B6 /* Assets */,
 				F67E52951E451823004518B6 /* Helpers */,
 				F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */,
@@ -226,6 +240,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PMW49D46PG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					F6AA7F531E43B8CD007C55E0 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -449,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSConf/iOSConf.entitlements;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = iOSConf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -462,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOSConf/iOSConf.entitlements;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = iOSConf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -86,7 +86,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
 
         let dropPin = MKPointAnnotation()
         dropPin.coordinate = venueLocation
-        dropPin.title = "Gazarte"
+        dropPin.title = venue.venueName
         mapView.addAnnotation(dropPin)
 
         let span = MKCoordinateSpanMake(0.005, 0.005)
@@ -110,7 +110,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
     @IBAction func directionsButtonTapped(_ sender: Any) {
         let place = MKPlacemark(coordinate: venue.coordinate, addressDictionary: nil)
         let destination = MKMapItem(placemark: place)
-        destination.name = "Gazarte"
+        destination.name = "iOS.Conf, " + venue.venueName
         let items = [destination]
         let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         MKMapItem.openMaps(with: items, launchOptions: options)
@@ -120,7 +120,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
         let storeViewController = SKStoreProductViewController()
         storeViewController.delegate = self
         
-        let parameters = [ SKStoreProductParameterITunesItemIdentifier : iTunesIdentifier]
+        let parameters = [SKStoreProductParameterITunesItemIdentifier : iTunesIdentifier]
         storeViewController.loadProduct(withParameters: parameters) { [weak self] (loaded, error) -> Void in
             if loaded {
                 self?.present(storeViewController, animated: true, completion: nil)

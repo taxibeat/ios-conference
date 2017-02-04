@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A02B81E4601180050B7BA /* StoreKit.framework */; };
+		F60A02BC1E460E740050B7BA /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BB1E460E740050B7BA /* Speaker.swift */; };
+		F60A02BE1E46103F0050B7BA /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */; };
+		F60A02C01E4616970050B7BA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BF1E4616970050B7BA /* Log.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		F60A02B81E4601180050B7BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F60A02BB1E460E740050B7BA /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		F60A02BF1E4616970050B7BA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -102,12 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60A02BA1E460E540050B7BA /* CloudKit Handling */ = {
+			isa = PBXGroup;
+			children = (
+				F60A02BB1E460E740050B7BA /* Speaker.swift */,
+				F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */,
+			);
+			name = "CloudKit Handling";
+			sourceTree = "<group>";
+		};
 		F67E52951E451823004518B6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				F67E52961E451835004518B6 /* GradientView.swift */,
 				F67E52981E45188F004518B6 /* ConstraintsHandler.swift */,
 				F67E52A31E454414004518B6 /* UIImageHelpers.swift */,
+				F60A02BF1E4616970050B7BA /* Log.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -154,6 +170,7 @@
 		F6AA7F401E43B8CC007C55E0 /* iOSConf */ = {
 			isa = PBXGroup;
 			children = (
+				F60A02BA1E460E540050B7BA /* CloudKit Handling */,
 				F67E529D1E45206A004518B6 /* iOSConf.entitlements */,
 				F67E529A1E451AF3004518B6 /* Assets */,
 				F67E52951E451823004518B6 /* Helpers */,
@@ -341,9 +358,12 @@
 			files = (
 				F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */,
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
+				F60A02C01E4616970050B7BA /* Log.swift in Sources */,
+				F60A02BE1E46103F0050B7BA /* CloudKitManager.swift in Sources */,
 				F67E52A61E454CA3004518B6 /* ConferenceTabBarViewController.swift in Sources */,
 				F67E52971E451835004518B6 /* GradientView.swift in Sources */,
 				F67E52A41E454414004518B6 /* UIImageHelpers.swift in Sources */,
+				F60A02BC1E460E740050B7BA /* Speaker.swift in Sources */,
 				F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */,
 				F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */,
 				F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */,

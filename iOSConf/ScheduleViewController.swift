@@ -77,7 +77,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let talkItem = talks[indexPath.section]
+        let talkItem = talks[indexPath.row]
         if talkItem.hasSpeaker == false {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as! ScheduleTableViewCell
             cell.timeLabel.text = talkItem.timeString

@@ -21,6 +21,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 354
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 60.0, 0.0)
         
         speakers = CloudKitManager.sharedInstance.speakers
     }
@@ -42,7 +43,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let speaker = self.speakers?[0]
+        let speaker = self.speakers?[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "speakerCell", for: indexPath) as! SpeakerTableViewCell
         
         if expandedCellIndex == indexPath.section {
@@ -59,6 +60,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
         cell.speakerName.text = speaker?.name
         cell.speakerPosition.text = speaker?.position
         cell.speakerBio.text = speaker?.bio
+        
         return cell
     }
 
@@ -68,6 +70,14 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
         
         let cell = tableView.cellForRow(at: indexPath) as! SpeakerTableViewCell
         expandTableCell(cell: cell,indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 14.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     func expandTableCell(cell: SpeakerTableViewCell, indexPath: IndexPath) {

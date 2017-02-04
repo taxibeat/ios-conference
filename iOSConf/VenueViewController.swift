@@ -49,23 +49,6 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
         
         venueNameLabel.text = venue.venueName
         venueAddressLabel.text = venue.address
-        
-        CloudKitManager.sharedInstance.fetchSpeakers { (speakers, error) in
-            if speakers!.count > 0 {
-                let cha = speakers![0]
-                Log.printThis(cha.name!)
-                Log.printThis(cha.bio!)
-                Log.printThis(cha.position!)
-                let image = cha.avatarImage
-                Log.printThis("yes")
-            }
-        }
-        
-        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
-            if talks!.count > 0 {
-                
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {

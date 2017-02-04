@@ -20,16 +20,21 @@ public struct ScheduleItem {
     public init?(record: CKRecord) {
         guard let theDescription = record.object(forKey: "Description") as? String,
             let itHasSpeaker = record.object(forKey: "hasSpeaker") as? Int,
-            let theSpeakerName = record.object(forKey: "Speaker") as? String,
             let theTimeString = record.object(forKey: "TimeString") as? String,
-            let theWeight = record.object(forKey: "Weight") as? Int,
-            let theSpeakerPosition = record.object(forKey:"SpeakerPosition") as? String else { return nil }
+            let theWeight = record.object(forKey: "Weight") as? Int else { return nil }
         
         self.description = theDescription
-        self.speakerName = theSpeakerName
-        self.speakerPosition = theSpeakerPosition
+        
+        if  let theSpeakerName = record.object(forKey: "Speaker") as? String {
+            self.speakerName = theSpeakerName
+        }
+        
+        if  let theSpeakerPosition = record.object(forKey:"SpeakerPosition") as? String {
+            self.speakerPosition = theSpeakerPosition
+        }
+        
         self.timeString = theTimeString
         self.hasSpeaker = Bool(itHasSpeaker as NSNumber)
         self.weight = theWeight
- }
+    }
 }

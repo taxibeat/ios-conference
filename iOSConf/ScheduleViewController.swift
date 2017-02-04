@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TBConfFramework
 
 class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,6 +17,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var shadowView: UIView!
     
+    var talks = [ScheduleItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +25,23 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         styleTable()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         tableView.reloadData()
         self.tableViewHeightConstraint.constant = getTableViewHeight()
+        
+        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
+            if error == nil {
+                if let theTalks = talks {
+                    self.talks = theTalks
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.tableView.layoutIfNeeded()
+                        self.tableViewHeightConstraint.constant = self.getTableViewHeight()
+                    }
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +54,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.reloadData()
         tableView.layoutIfNeeded()
         
-        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top
+        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top - 35.0
     }
     
     func styleTable() {
@@ -57,17 +72,23 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return talks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        let talkItem = talks[indexPath.row]
+        if talkItem.hasSpeaker == false {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as! ScheduleTableViewCell
+            cell.timeLabel.text = talkItem.timeString
+            cell.scheduleItemTitle.text = talkItem.description
             cell.isUserInteractionEnabled = false
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleSpeakerCell", for: indexPath) as! ScheduleSpeakerTableViewCell
-            cell.talkTitle.text = "Dirty Little Tricks From The Dark Corners Of iOS Development."
+            cell.talkTitle.text = talkItem.description
+            cell.speakerName.text = talkItem.speakerName
+            cell.speakerPositionLabel.text = talkItem.speakerPosition
+            cell.timeLabel.text = talkItem.timeString
             cell.isUserInteractionEnabled = false
             return cell
         }

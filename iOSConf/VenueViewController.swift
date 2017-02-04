@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import StoreKit
 
-class VenueViewController: UIViewController, MKMapViewDelegate {
+class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductViewControllerDelegate {
 
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var taxibeatButton: UIButton!
@@ -25,7 +26,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
         static let venueName = "Gazarte"
     }
     
-    lazy var taxibeatButtonTitle: NSMutableAttributedString = {
+    lazy var taxibeatButtonTitle: NSAttributedString = {
         let attrText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Get me here with  ", attributes:[NSFontAttributeName: UIFont.systemFont(ofSize: 16.0), NSForegroundColorAttributeName: UIColor.white]))
         let imageAttachment = NSTextAttachment()
         let image = #imageLiteral(resourceName: "taxibeatLogo").maskWithColor(color: UIColor.white)?.resizedImageWithinRect(rectSize: CGSize(width: 80, height: 15.8))
@@ -44,6 +45,9 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
         styleDirectionsButton()
         styleVenueContainer()
         addVenuePin()
+        
+        venueNameLabel.text = venue.venueName
+        venueAddressLabel.text = venue.address
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,14 +95,38 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
         mapView.setVisibleMapRect(mapView.visibleMapRect, edgePadding: UIEdgeInsetsMake(0.0, 0.0, 290.0, 0.0), animated: true)
     }
 
-    /*
-    // MARK: - Navigation
+    
+    // MARK: Button actions
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func taxibeatButtonTapped(_ sender: Any) {
+        guard let taxibeatURL = URL(string: "taxibeat://") else { return }
+        if UIApplication.shared.canOpenURL(taxibeatURL) == true {
+            UIApplication.shared.openURL(taxibeatURL)
+        } else {
+            openStoreProductPage(iTunesIdentifier: "436031420")
+        }
     }
-    */
-
+    
+    @IBAction func directionsButtonTapped(_ sender: Any) {
+        
+    }
+    
+    func openStoreProductPage(iTunesIdentifier: String) {
+        let storeViewController = SKStoreProductViewController()
+        storeViewController.delegate = self
+        
+        let parameters = [ SKStoreProductParameterITunesItemIdentifier : iTunesIdentifier]
+        storeViewController.loadProduct(withParameters: parameters) { [weak self] (loaded, error) -> Void in
+            if loaded {
+                self?.present(storeViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
+    // MARK: Store delegate
+    
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
 }

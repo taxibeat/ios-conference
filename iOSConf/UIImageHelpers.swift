@@ -33,7 +33,6 @@ extension UIImage {
         context!.translateBy(x: 0, y: self.size.height)
         context!.scaleBy(x: 1.0, y: -1.0)
         
-        
         context!.setBlendMode(.normal)
         
         let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
@@ -48,7 +47,6 @@ extension UIImage {
     }
     
     func resizedImage(newSize: CGSize) -> UIImage? {
-        // Guard newSize is different
         guard self.size != newSize else { return self }
         
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
@@ -58,8 +56,6 @@ extension UIImage {
         return newImage
     }
     
-    /// Returns a resized image that fits in rectSize, keeping it's aspect ratio
-    /// Note that the new image size is not rectSize, but within it.
     func resizedImageWithinRect(rectSize: CGSize) -> UIImage? {
         let widthFactor = size.width / rectSize.width
         let heightFactor = size.height / rectSize.height

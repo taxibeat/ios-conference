@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A02B81E4601180050B7BA /* StoreKit.framework */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F60A02B81E4601180050B7BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */,
 				F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */,
 				F67E52A01E452075004518B6 /* CloudKit.framework in Frameworks */,
 			);
@@ -120,6 +123,7 @@
 		F67E529E1E452075004518B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F60A02B81E4601180050B7BA /* StoreKit.framework */,
 				F67E52A71E45D17D004518B6 /* MapKit.framework */,
 				F67E529F1E452075004518B6 /* CloudKit.framework */,
 			);
@@ -497,6 +501,7 @@
 				CODE_SIGN_ENTITLEMENTS = iOSConf/iOSConf.entitlements;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = iOSConf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +516,7 @@
 				CODE_SIGN_ENTITLEMENTS = iOSConf/iOSConf.entitlements;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = iOSConf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";

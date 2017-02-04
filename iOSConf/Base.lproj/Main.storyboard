@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -131,11 +130,11 @@
                                                     <outlet property="timeLabel" destination="qmb-PL-Otp" id="F8N-4B-koB"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleSpeakerCell" rowHeight="154" id="mdS-Ok-8JY" customClass="ScheduleSpeakerTableViewCell" customModule="iOSConf" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="163" width="326" height="154"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scheduleSpeakerCell" rowHeight="155" id="mdS-Ok-8JY" customClass="ScheduleSpeakerTableViewCell" customModule="iOSConf" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="163" width="326" height="155"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdS-Ok-8JY" id="iij-PA-uAO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="153"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="154"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41-10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtn-cZ-ov8">
@@ -166,7 +165,7 @@
                                                         <constraint firstItem="FAJ-9z-TZA" firstAttribute="top" secondItem="5qq-Hy-uBc" secondAttribute="bottom" constant="5" id="2nu-CD-Dga"/>
                                                         <constraint firstItem="5qq-Hy-uBc" firstAttribute="leading" secondItem="Dtn-cZ-ov8" secondAttribute="leading" id="3Zh-OB-pkq"/>
                                                         <constraint firstItem="FkM-yw-LPp" firstAttribute="leading" secondItem="FAJ-9z-TZA" secondAttribute="leading" id="BVX-IE-NFx"/>
-                                                        <constraint firstAttribute="bottom" secondItem="FkM-yw-LPp" secondAttribute="bottom" constant="24" id="DCb-UO-HVd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FkM-yw-LPp" secondAttribute="bottom" constant="25" id="DCb-UO-HVd"/>
                                                         <constraint firstItem="FAJ-9z-TZA" firstAttribute="leading" secondItem="5qq-Hy-uBc" secondAttribute="leading" id="Vl4-nl-LW9"/>
                                                         <constraint firstItem="Dtn-cZ-ov8" firstAttribute="leading" secondItem="iij-PA-uAO" secondAttribute="leading" constant="16" id="XfR-0G-OrD"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5qq-Hy-uBc" secondAttribute="trailing" constant="15" id="fq9-Wt-jtP"/>
@@ -279,7 +278,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nc3-k0-5L9">
-                                <rect key="frame" x="23.5" y="369" width="327" height="160"/>
+                                <rect key="frame" x="24" y="369" width="327" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-7j-Evc">
@@ -295,7 +294,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voutadon 34, Athens, Greece" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-h1-Zlm">
-                                        <rect key="frame" x="16" y="72" width="295" height="19.5"/>
+                                        <rect key="frame" x="16" y="72" width="295" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -612,7 +611,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOM-kJ-Zt1">
-                                <rect key="frame" x="105" y="310" width="164.5" height="21"/>
+                                <rect key="frame" x="123" y="310" width="129" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-mA-KKl">
                                         <rect key="frame" x="0.0" y="2" width="75.5" height="17"/>
@@ -621,7 +620,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STD-Wd-nRX">
-                                        <rect key="frame" x="84.5" y="-30" width="80" height="81"/>
+                                        <rect key="frame" x="84.5" y="-36" width="44.5" height="93.5"/>
                                         <fontDescription key="fontDescription" name="taxibeat" family="taxibeat" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

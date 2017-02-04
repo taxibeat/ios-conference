@@ -55,7 +55,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.reloadData()
         tableView.layoutIfNeeded()
         
-        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top - 35.0
+        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top - 33.0
     }
     
     func styleTable() {
@@ -65,11 +65,6 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.layer.masksToBounds = true
         
         shadowView.layer.cornerRadius = 10.0
-//        shadowView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-//        shadowView.layer.shadowColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1).cgColor
-//        shadowView.layer.shadowRadius = 0.0
-//        shadowView.layer.masksToBounds = false
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

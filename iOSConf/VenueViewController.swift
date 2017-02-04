@@ -19,6 +19,22 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet private weak var directionsButton: UIButton!
     @IBOutlet private weak var shadowView: UIView!
     
+    struct venue {
+        static let coordinate = CLLocationCoordinate2DMake(37.9787925, 23.7123368)
+        static let address = "Voutadon 34, Athens, Greece"
+        static let venueName = "Gazarte"
+    }
+    
+    lazy var taxibeatButtonTitle: NSMutableAttributedString = {
+        let attrText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Get me here with  ", attributes:[NSFontAttributeName: UIFont.systemFont(ofSize: 16.0), NSForegroundColorAttributeName: UIColor.white]))
+        let imageAttachment = NSTextAttachment()
+        let image = #imageLiteral(resourceName: "taxibeatLogo").maskWithColor(color: UIColor.white)?.resizedImageWithinRect(rectSize: CGSize(width: 80, height: 15.8))
+        imageAttachment.image = image
+        imageAttachment.bounds = CGRect(x: 0.0, y: UIFont.systemFont(ofSize: 16.0).descender + 1.5, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
+        attrText.append(NSAttributedString(attachment: imageAttachment))
+        return attrText
+    }()
+
     
     // MARK: View lifecycle
     
@@ -41,7 +57,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
     func styleVenueContainer() {
         venueInfoContainerView.layer.cornerRadius = 10.0
         taxibeatButton.layer.cornerRadius = 10.0
-        
+        taxibeatButton.setAttributedTitle(taxibeatButtonTitle, for: .normal)
         shadowView.layer.cornerRadius = 10.0
         shadowView.layer.shadowColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1).cgColor
         shadowView.layer.shadowOffset = CGSize.zero
@@ -62,7 +78,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate {
     // MARK: Map
     
     func addVenuePin() {
-        let venueLocation = CLLocationCoordinate2DMake(37.9787925, 23.7123368)
+        let venueLocation = venue.coordinate
 
         let dropPin = MKPointAnnotation()
         dropPin.coordinate = venueLocation

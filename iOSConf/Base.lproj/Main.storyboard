@@ -60,7 +60,7 @@
         <!--VENUE-->
         <scene sceneID="lQX-BS-pXd">
             <objects>
-                <viewController id="UA7-VJ-gar" sceneMemberID="viewController">
+                <viewController id="UA7-VJ-gar" customClass="VenueViewController" customModule="iOSConf" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kyW-z4-fqK"/>
                         <viewControllerLayoutGuide type="bottom" id="K4v-9H-wA0"/>
@@ -68,11 +68,104 @@
                     <view key="view" contentMode="scaleToFill" id="zgQ-ab-ATh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-40-NCq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UA7-VJ-gar" id="TTI-aa-HSb"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-JM-3CD">
+                                <rect key="frame" x="24" y="545" width="327" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iwC-gh-DxJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get here with a taxibeat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nc3-k0-5L9">
+                                <rect key="frame" x="23.5" y="369" width="327" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-7j-Evc">
+                                <rect key="frame" x="24" y="369" width="327" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gazarte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdf-h4-R5G">
+                                        <rect key="frame" x="16" y="16" width="295" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="rJk-rf-rf5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voutadon 34, Athens, Greece" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-h1-Zlm">
+                                        <rect key="frame" x="16" y="72" width="295" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-KI-Zby">
+                                        <rect key="frame" x="0.0" y="112" width="327" height="48"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.7843137255" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="BJU-rv-Qkp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Directions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GPV-KI-Zby" secondAttribute="bottom" id="0cH-kH-VYY"/>
+                                    <constraint firstAttribute="trailing" secondItem="GPV-KI-Zby" secondAttribute="trailing" id="90o-cg-SeQ"/>
+                                    <constraint firstItem="f0h-h1-Zlm" firstAttribute="top" secondItem="Vdf-h4-R5G" secondAttribute="bottom" constant="8" id="B30-nx-umj"/>
+                                    <constraint firstAttribute="height" constant="160" id="D9e-fB-MIE"/>
+                                    <constraint firstAttribute="trailing" secondItem="f0h-h1-Zlm" secondAttribute="trailing" constant="16" id="W4I-vJ-6Ww"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vdf-h4-R5G" secondAttribute="trailing" constant="16" id="e9S-dw-xRZ"/>
+                                    <constraint firstItem="f0h-h1-Zlm" firstAttribute="leading" secondItem="bJS-7j-Evc" secondAttribute="leading" constant="16" id="kRH-Cm-bE9"/>
+                                    <constraint firstItem="Vdf-h4-R5G" firstAttribute="leading" secondItem="bJS-7j-Evc" secondAttribute="leading" constant="16" id="okz-76-Rfg"/>
+                                    <constraint firstItem="Vdf-h4-R5G" firstAttribute="top" secondItem="bJS-7j-Evc" secondAttribute="top" constant="16" id="q8L-pc-OmA"/>
+                                    <constraint firstItem="GPV-KI-Zby" firstAttribute="leading" secondItem="bJS-7j-Evc" secondAttribute="leading" id="vzr-ya-e8X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SIg-40-NCq" firstAttribute="centerY" secondItem="zgQ-ab-ATh" secondAttribute="centerY" id="3uU-Oq-5iE"/>
+                            <constraint firstItem="rQ1-JM-3CD" firstAttribute="top" secondItem="bJS-7j-Evc" secondAttribute="bottom" constant="16" id="9bp-ZT-QvB"/>
+                            <constraint firstAttribute="trailing" secondItem="SIg-40-NCq" secondAttribute="trailing" id="FgX-NR-jsn"/>
+                            <constraint firstItem="bJS-7j-Evc" firstAttribute="leading" secondItem="zgQ-ab-ATh" secondAttribute="leading" constant="24" id="JE8-gh-L6f"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rQ1-JM-3CD" secondAttribute="bottom" constant="72" id="Nlf-Aq-Z3s"/>
+                            <constraint firstItem="Nc3-k0-5L9" firstAttribute="centerY" secondItem="bJS-7j-Evc" secondAttribute="centerY" id="S17-F6-Ui8"/>
+                            <constraint firstAttribute="trailing" secondItem="bJS-7j-Evc" secondAttribute="trailing" constant="24" id="Szf-MH-cXV"/>
+                            <constraint firstAttribute="trailing" secondItem="rQ1-JM-3CD" secondAttribute="trailing" constant="24" id="h5a-a7-cff"/>
+                            <constraint firstItem="rQ1-JM-3CD" firstAttribute="leading" secondItem="zgQ-ab-ATh" secondAttribute="leading" constant="24" id="kuT-HU-gDv"/>
+                            <constraint firstItem="Nc3-k0-5L9" firstAttribute="centerX" secondItem="bJS-7j-Evc" secondAttribute="centerX" id="on6-Mv-eLv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SIg-40-NCq" secondAttribute="bottom" id="q56-hS-2Bf"/>
+                            <constraint firstItem="SIg-40-NCq" firstAttribute="top" secondItem="zgQ-ab-ATh" secondAttribute="topMargin" id="qw4-Xk-gNH"/>
+                            <constraint firstItem="SIg-40-NCq" firstAttribute="leading" secondItem="zgQ-ab-ATh" secondAttribute="leading" id="t6E-PJ-UTe"/>
+                            <constraint firstItem="Nc3-k0-5L9" firstAttribute="width" secondItem="bJS-7j-Evc" secondAttribute="width" id="tGg-HG-QSj"/>
+                            <constraint firstItem="Nc3-k0-5L9" firstAttribute="height" secondItem="bJS-7j-Evc" secondAttribute="height" id="v3B-5H-d1N"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="VENUE" id="DLU-dQ-zsd">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="directionsButton" destination="GPV-KI-Zby" id="sf7-Q3-JA0"/>
+                        <outlet property="mapView" destination="SIg-40-NCq" id="wmC-eS-lzC"/>
+                        <outlet property="shadowView" destination="Nc3-k0-5L9" id="mXa-cT-CSH"/>
+                        <outlet property="taxibeatButton" destination="rQ1-JM-3CD" id="QZl-IB-qRl"/>
+                        <outlet property="venueAddressLabel" destination="f0h-h1-Zlm" id="WFG-i5-jWX"/>
+                        <outlet property="venueInfoContainerView" destination="bJS-7j-Evc" id="H9C-7g-aFQ"/>
+                        <outlet property="venueNameLabel" destination="Vdf-h4-R5G" id="wSF-yS-zt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clq-Nn-O4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,14 +9,13 @@
 import UIKit
 import CloudKit
 
-class Speaker: NSObject {
+public struct Speaker {
+    public var name: String?
+    public var position: String?
+    public var bio: String?
+    public var avatar: CKAsset?
     
-    var name: String?
-    var position: String?
-    var bio: String?
-    var avatar: CKAsset?
-    
-    var avatarImage: UIImage? {
+    public var avatarImage: UIImage? {
         if let fileAsset = avatar {
             let data = try! Data(contentsOf: fileAsset.fileURL)
             return UIImage(data: data)
@@ -24,7 +23,7 @@ class Speaker: NSObject {
         return nil
     }
     
-    init?(record: CKRecord) {
+    public init?(record: CKRecord) {
         guard let theName = record.object(forKey: "Name") as? String,
             let thePosition = record.object(forKey: "Position") as? String,
             let theBio = record.object(forKey: "Bio") as? String,
@@ -35,12 +34,4 @@ class Speaker: NSObject {
         self.bio = theBio
         self.avatar = theAvatar
     }
-    
-//    func getAvatar() -> UIImage? {
-//        if let file = self.avatar {
-//            let data = try! Data(contentsOf: file.fileURL)
-//            return UIImage(data: data)
-//        }
-//        return nil
-//    }
 }

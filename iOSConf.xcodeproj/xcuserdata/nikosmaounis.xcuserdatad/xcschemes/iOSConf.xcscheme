@@ -48,6 +48,16 @@
                ReferencedContainer = "container:iOSConf.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F60A02CD1E461F1C0050B7BA"
+               BuildableName = "TBConfFrameworkTests.xctest"
+               BlueprintName = "TBConfFrameworkTests"
+               ReferencedContainer = "container:iOSConf.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -9,10 +9,10 @@
 import UIKit
 import CloudKit
 
-class CloudKitManager: NSObject {
-    static let sharedInstance = CloudKitManager()
+public class CloudKitManager: NSObject {
+    public static let sharedInstance = CloudKitManager()
     
-    func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
+    public func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
         let query = CKQuery(recordType: "Speakers", predicate: NSPredicate(format: "TRUEPREDICATE"))
         let queryOperation = CKQueryOperation(query: query)

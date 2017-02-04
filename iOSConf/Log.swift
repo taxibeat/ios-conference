@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Log {
-    class func printThis(_ object: Any) {
+public class Log {
+    public class func printThis(_ object: Any) {
         #if DEBUG
             print(object)
         #endif

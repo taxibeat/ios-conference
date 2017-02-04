@@ -60,6 +60,12 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
                 Log.printThis("yes")
             }
         }
+        
+        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
+            if talks!.count > 0 {
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

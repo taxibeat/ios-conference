@@ -18,6 +18,9 @@
 		F60A02E61E461F3A0050B7BA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BF1E4616970050B7BA /* Log.swift */; };
 		F60A02E71E4621040050B7BA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E529F1E452075004518B6 /* CloudKit.framework */; };
 		F60A02E91E4623280050B7BA /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02E81E4623280050B7BA /* ScheduleItem.swift */; };
+		F60A02EB1E46260D0050B7BA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */; };
+		F60A02ED1E4633E60050B7BA /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */; };
+		F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -29,7 +32,6 @@
 		F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E52A71E45D17D004518B6 /* MapKit.framework */; };
 		F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52A91E45D21C004518B6 /* VenueViewController.swift */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
-		F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */; };
 		F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */; };
 		F6AA7F491E43B8CC007C55E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F471E43B8CC007C55E0 /* Main.storyboard */; };
 		F6AA7F4B1E43B8CC007C55E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */; };
@@ -102,6 +104,9 @@
 		F60A02D51E461F1C0050B7BA /* TBConfFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBConfFrameworkTests.swift; sourceTree = "<group>"; };
 		F60A02D71E461F1C0050B7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60A02E81E4623280050B7BA /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -115,7 +120,6 @@
 		F67E52A91E45D21C004518B6 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F6AA7F481E43B8CC007C55E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,10 +269,12 @@
 				F67E529A1E451AF3004518B6 /* Assets */,
 				F67E52951E451823004518B6 /* Helpers */,
 				F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */,
-				F6AA7F431E43B8CC007C55E0 /* FirstViewController.swift */,
 				F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */,
 				F67E52931E4515BC004518B6 /* LaunchViewController.swift */,
 				F67E52A91E45D21C004518B6 /* VenueViewController.swift */,
+				F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */,
+				F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */,
+				F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */,
 				F67E52A11E4536D0004518B6 /* ConferenceViewController.swift */,
 				F67E52A51E454CA3004518B6 /* ConferenceTabBarViewController.swift */,
 				F6AA7F471E43B8CC007C55E0 /* Main.storyboard */,
@@ -542,15 +548,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */,
 				F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */,
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
+				F60A02ED1E4633E60050B7BA /* ScheduleTableViewCell.swift in Sources */,
 				F67E52A61E454CA3004518B6 /* ConferenceTabBarViewController.swift in Sources */,
 				F67E52971E451835004518B6 /* GradientView.swift in Sources */,
 				F67E52A41E454414004518B6 /* UIImageHelpers.swift in Sources */,
 				F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */,
 				F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */,
 				F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */,
-				F6AA7F441E43B8CC007C55E0 /* FirstViewController.swift in Sources */,
+				F60A02EB1E46260D0050B7BA /* ScheduleViewController.swift in Sources */,
 				F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

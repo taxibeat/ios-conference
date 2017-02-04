@@ -21,6 +21,8 @@
 		F60A02EB1E46260D0050B7BA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */; };
 		F60A02ED1E4633E60050B7BA /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */; };
 		F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */; };
+		F60A02F11E4653310050B7BA /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02F01E4653310050B7BA /* SpeakerTableViewCell.swift */; };
+		F60A02F31E4653450050B7BA /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02F21E4653450050B7BA /* SpeakersViewController.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -107,6 +109,8 @@
 		F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		F60A02F01E4653310050B7BA /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		F60A02F21E4653450050B7BA /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */,
 				F60A02EC1E4633E60050B7BA /* ScheduleTableViewCell.swift */,
 				F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */,
+				F60A02F01E4653310050B7BA /* SpeakerTableViewCell.swift */,
+				F60A02F21E4653450050B7BA /* SpeakersViewController.swift */,
 				F67E52A11E4536D0004518B6 /* ConferenceViewController.swift */,
 				F67E52A51E454CA3004518B6 /* ConferenceTabBarViewController.swift */,
 				F6AA7F471E43B8CC007C55E0 /* Main.storyboard */,
@@ -549,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */,
+				F60A02F11E4653310050B7BA /* SpeakerTableViewCell.swift in Sources */,
 				F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */,
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
 				F60A02ED1E4633E60050B7BA /* ScheduleTableViewCell.swift in Sources */,
@@ -559,6 +566,7 @@
 				F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */,
 				F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */,
 				F60A02EB1E46260D0050B7BA /* ScheduleViewController.swift in Sources */,
+				F60A02F31E4653450050B7BA /* SpeakersViewController.swift in Sources */,
 				F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

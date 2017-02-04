@@ -27,21 +27,22 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.estimatedRowHeight = 140
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-        tableView.reloadData()
-        self.tableViewHeightConstraint.constant = getTableViewHeight()
-        
-        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
-            if error == nil {
-                if let theTalks = talks {
-                    self.talks = theTalks
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.tableView.layoutIfNeeded()
-                        self.tableViewHeightConstraint.constant = self.getTableViewHeight()
+        if let thetalks = CloudKitManager.sharedInstance.talks {
+            self.talks = thetalks
+            self.tableViewHeightConstraint.constant = getTableViewHeight()
+        } else {
+            CloudKitManager.sharedInstance.fetchTalks({ (talks, error) in
+                if error == nil {
+                    if let theTalks = talks {
+                        self.talks = theTalks
+                        DispatchQueue.main.async {
+                            self.tableViewHeightConstraint.constant = self.getTableViewHeight()
+                        }
                     }
                 }
-            }
+            })
         }
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,7 +77,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let talkItem = talks[indexPath.row]
+        let talkItem = talks[indexPath.section]
         if talkItem.hasSpeaker == false {
             let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as! ScheduleTableViewCell
             cell.timeLabel.text = talkItem.timeString
@@ -93,7 +94,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
             return cell
         }
     }
-
+    
     /*
     // MARK: - Navigation
 

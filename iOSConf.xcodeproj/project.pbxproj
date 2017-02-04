@@ -16,6 +16,8 @@
 		F60A02E41E461F2B0050B7BA /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BB1E460E740050B7BA /* Speaker.swift */; };
 		F60A02E51E461F2F0050B7BA /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */; };
 		F60A02E61E461F3A0050B7BA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BF1E4616970050B7BA /* Log.swift */; };
+		F60A02E71E4621040050B7BA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E529F1E452075004518B6 /* CloudKit.framework */; };
+		F60A02E91E4623280050B7BA /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02E81E4623280050B7BA /* ScheduleItem.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -99,6 +101,7 @@
 		F60A02CE1E461F1C0050B7BA /* TBConfFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBConfFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60A02D51E461F1C0050B7BA /* TBConfFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBConfFrameworkTests.swift; sourceTree = "<group>"; };
 		F60A02D71E461F1C0050B7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F60A02E81E4623280050B7BA /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60A02E71E4621040050B7BA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +179,7 @@
 			children = (
 				F60A02BB1E460E740050B7BA /* Speaker.swift */,
 				F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */,
+				F60A02E81E4623280050B7BA /* ScheduleItem.swift */,
 			);
 			name = "CloudKit Handling";
 			path = ../iOSConf;
@@ -519,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60A02E51E461F2F0050B7BA /* CloudKitManager.swift in Sources */,
+				F60A02E91E4623280050B7BA /* ScheduleItem.swift in Sources */,
 				F60A02E41E461F2B0050B7BA /* Speaker.swift in Sources */,
 				F60A02E61E461F3A0050B7BA /* Log.swift in Sources */,
 			);

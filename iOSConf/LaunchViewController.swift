@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import TBConfFramework
 
 class LaunchViewController: ConferenceViewController {
 
     @IBOutlet private weak var magicButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     
     // MARK: View lifecycle
@@ -19,6 +22,35 @@ class LaunchViewController: ConferenceViewController {
         super.viewDidLoad()
 
         styleMagicButton()
+        activityIndicator.startAnimating()
+        welcomeLabel.text = "Fetching one more thing..."
+        self.magicButton.alpha = 0.0
+        
+        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
+            if error == nil {
+                if let theTalks = talks {
+                    CloudKitManager.sharedInstance.talks = theTalks
+                }
+                CloudKitManager.sharedInstance.fetchSpeakers { (speakers, error) in
+                    if error == nil {
+                        if let theSpeakers = speakers {
+                            CloudKitManager.sharedInstance.speakers = theSpeakers
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                        self.welcomeLabel.text = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                        UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                            self.magicButton.alpha = 1.0
+                            self.magicButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                            self.magicButton.transform = CGAffineTransform.identity
+                        }, completion: { (finished) in
+                            
+                        })
+                    }
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -481,6 +481,20 @@
                                     <constraint firstItem="lXn-mA-KKl" firstAttribute="leading" secondItem="sOM-kJ-Zt1" secondAttribute="leading" id="a6A-Q6-4Bc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bd-wh-oTJ">
+                                <rect key="frame" x="0.0" y="331" width="375" height="131.5"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cdx-rt-Lyk">
+                                        <rect key="frame" x="177.5" y="56" width="20" height="20"/>
+                                        <color key="color" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cdx-rt-Lyk" firstAttribute="centerX" secondItem="8Bd-wh-oTJ" secondAttribute="centerX" id="NT4-d0-EJc"/>
+                                    <constraint firstItem="cdx-rt-Lyk" firstAttribute="centerY" secondItem="8Bd-wh-oTJ" secondAttribute="centerY" id="knj-Sh-tSv"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOE-t4-S4m">
                                 <rect key="frame" x="41.5" y="462.5" width="291" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -509,7 +523,10 @@
                             <constraint firstItem="0l3-Sg-KcQ" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="73" id="AqO-WI-xxI"/>
                             <constraint firstItem="Vve-0a-C1B" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="4" id="BXQ-NA-emR"/>
                             <constraint firstItem="bMA-dH-pQu" firstAttribute="centerY" secondItem="zTg-fd-H1K" secondAttribute="centerY" constant="120" id="DT2-ha-99W"/>
+                            <constraint firstItem="8Bd-wh-oTJ" firstAttribute="top" secondItem="sOM-kJ-Zt1" secondAttribute="bottom" id="ENh-dh-9eW"/>
+                            <constraint firstItem="gOE-t4-S4m" firstAttribute="top" secondItem="8Bd-wh-oTJ" secondAttribute="bottom" id="HHA-tA-hML"/>
                             <constraint firstAttribute="bottomMargin" secondItem="gOE-t4-S4m" secondAttribute="bottom" constant="154" id="Jtz-zT-l71"/>
+                            <constraint firstAttribute="trailing" secondItem="8Bd-wh-oTJ" secondAttribute="trailing" id="KZs-Iq-5nE"/>
                             <constraint firstAttribute="trailing" secondItem="bMA-dH-pQu" secondAttribute="trailing" id="QkA-dz-cCs"/>
                             <constraint firstItem="gOE-t4-S4m" firstAttribute="centerX" secondItem="zTg-fd-H1K" secondAttribute="centerX" id="ZlQ-AM-oUl"/>
                             <constraint firstItem="sOM-kJ-Zt1" firstAttribute="top" secondItem="R0f-DY-zki" secondAttribute="bottom" constant="15" id="cXU-kJ-laW"/>
@@ -519,6 +536,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="FKn-4U-U9i" secondAttribute="bottom" constant="24" id="mCN-sD-Bfd"/>
                             <constraint firstItem="Vve-0a-C1B" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" id="qv0-9K-OLL"/>
                             <constraint firstItem="gOE-t4-S4m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zTg-fd-H1K" secondAttribute="leading" constant="30" id="rZM-xT-tWt"/>
+                            <constraint firstItem="8Bd-wh-oTJ" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" id="sDX-DX-Mx6"/>
                             <constraint firstItem="FKn-4U-U9i" firstAttribute="leading" secondItem="zTg-fd-H1K" secondAttribute="leading" constant="24" id="skK-bT-lJX"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gOE-t4-S4m" secondAttribute="trailing" constant="30" id="t9Q-6g-jwQ"/>
                             <constraint firstItem="sOM-kJ-Zt1" firstAttribute="centerX" secondItem="R0f-DY-zki" secondAttribute="centerX" id="veW-4V-uvI"/>
@@ -526,7 +544,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="cdx-rt-Lyk" id="0FZ-ML-ql6"/>
                         <outlet property="magicButton" destination="FKn-4U-U9i" id="qGA-A2-ERS"/>
+                        <outlet property="welcomeLabel" destination="gOE-t4-S4m" id="d2w-KB-oyK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjD-ZW-SAu" userLabel="First Responder" sceneMemberID="firstResponder"/>

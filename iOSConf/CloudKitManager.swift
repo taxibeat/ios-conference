@@ -11,6 +11,8 @@ import CloudKit
 
 public class CloudKitManager: NSObject {
     public static let sharedInstance = CloudKitManager()
+    public var talks = [ScheduleItem]()
+    public var speakers = [Speaker]()
     
     public func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()

@@ -108,7 +108,12 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
     }
     
     @IBAction func directionsButtonTapped(_ sender: Any) {
-        
+        let place = MKPlacemark(coordinate: venue.coordinate, addressDictionary: nil)
+        let destination = MKMapItem(placemark: place)
+        destination.name = "Gazarte"
+        let items = [destination]
+        let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        MKMapItem.openMaps(with: items, launchOptions: options)
     }
     
     func openStoreProductPage(iTunesIdentifier: String) {

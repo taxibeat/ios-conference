@@ -22,7 +22,7 @@ public class CloudKitManager: NSObject {
         
         Log.printThis("Start fetch")
         
-        queryOperation.recordFetchedBlock = { (record: CKRecord!) -> () in
+        queryOperation.recordFetchedBlock = { (record: CKRecord!) in
             items.append(record)
         }
         
@@ -63,7 +63,7 @@ public class CloudKitManager: NSObject {
         
         Log.printThis("Start fetch")
         
-        queryOperation.recordFetchedBlock = { (record: CKRecord!) -> () in
+        queryOperation.recordFetchedBlock = { (record: CKRecord!) in
             items.append(record)
         }
         

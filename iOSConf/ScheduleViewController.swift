@@ -18,6 +18,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet weak var shadowView: UIView!
     
     var talks = [ScheduleItem]()
+    var hasFixedTableHeight = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,15 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         }
        
     }
+    
+    override func viewDidLayoutSubviews() {
+        if !hasFixedTableHeight {
+            tableView.reloadData()
+            tableView.layoutIfNeeded()
+            self.tableViewHeightConstraint.constant = tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top
+            hasFixedTableHeight = true
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,7 +80,13 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.reloadData()
         tableView.layoutIfNeeded()
         
-        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top - 33.0
+        var height = tableView.contentSize.height
+        let maxHeight = tableView.superview!.bounds.size.height - tableView.bounds.origin.y
+        
+        if height > maxHeight {
+            height = maxHeight
+        }
+        return height
     }
     
     func styleTable() {

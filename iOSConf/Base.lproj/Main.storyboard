@@ -230,7 +230,7 @@
                             <constraint firstItem="Xt1-9T-g9D" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="wgw-9L-YQ7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SCHEDULE" image="first" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" title="SCHEDULE" id="acW-dT-cKf">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
@@ -442,7 +442,7 @@
                                                     <rect key="frame" x="1" y="1" width="329" height="354"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46c-Eu-sZz">
-                                                            <rect key="frame" x="-0.5" y="0.0" width="329" height="354"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="354"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2TF-vr-CUV">
                                                                     <rect key="frame" x="88" y="40" width="152" height="152"/>
@@ -552,7 +552,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="t4P-oL-dTJ" secondAttribute="bottom" id="tFg-tO-Bqb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SPEAKERS" image="second" id="cPa-gy-q4n">
+                    <tabBarItem key="tabBarItem" title="SPEAKERS" id="cPa-gy-q4n">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
@@ -730,12 +730,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="group2" width="300" height="148"/>
         <image name="group3" width="177" height="178"/>
         <image name="group4" width="97" height="148"/>
         <image name="rectangleCopy10" width="49" height="57"/>
         <image name="rectangleCopy6" width="98" height="133"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

@@ -8,14 +8,31 @@
 
 import WatchKit
 import Foundation
+import CloudKit
+import TBConfFrameworkWatch
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var scheduleTable: WKInterfaceTable!
+    var talksArray = [ScheduleItem]()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
+            if let theTalks = talks {
+                self.talksArray = theTalks
+                self.scheduleTable.setNumberOfRows(self.talksArray.count, withRowType: "scheduleRow")
+                for (index, value) in self.talksArray.enumerated() {
+                    if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
+                        row.talkSpeakerLabel.setText(value.speakerName)
+                        row.talkTimeLabel.setText(value.timeString)
+                        row.talkTitleLabel.setText(value.description)
+                    }
+                }
+            }
+        }
     }
     
     override func willActivate() {

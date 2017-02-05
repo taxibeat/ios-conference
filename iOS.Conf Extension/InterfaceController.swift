@@ -25,10 +25,17 @@ class InterfaceController: WKInterfaceController {
                 self.talksArray = theTalks
                 self.scheduleTable.setNumberOfRows(self.talksArray.count, withRowType: "scheduleRow")
                 for (index, value) in self.talksArray.enumerated() {
-                    if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
-                        row.talkSpeakerLabel.setText(value.speakerName)
-                        row.talkTimeLabel.setText(value.timeString)
-                        row.talkTitleLabel.setText(value.description)
+                    if value.hasSpeaker == true {
+                        if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
+                            row.talkSpeakerLabel.setText(value.speakerName)
+                            row.talkTimeLabel.setText(value.timeString)
+                            row.talkTitleLabel.setText(value.description)
+                        }
+                    } else {
+                        if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
+                            row.talkTime.setText(value.timeString)
+                            row.talkTitle.setText(value.description)
+                        }
                     }
                 }
             }

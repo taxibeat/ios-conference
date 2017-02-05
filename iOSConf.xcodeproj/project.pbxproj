@@ -40,6 +40,7 @@
 		F61782FA1E472A9000462509 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */; };
 		F61782FB1E472A9300462509 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02E81E4623280050B7BA /* ScheduleItem.swift */; };
 		F61782FD1E47313A00462509 /* ScheduleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61782FC1E47313A00462509 /* ScheduleRowController.swift */; };
+		F61783011E475AE100462509 /* TalkRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61783001E475AE100462509 /* TalkRowController.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -195,8 +196,8 @@
 		F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBConfFrameworkWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61782EA1E472A6500462509 /* TBConfFrameworkWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBConfFrameworkWatch.h; sourceTree = "<group>"; };
 		F61782EB1E472A6500462509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F61782F51E472A7500462509 /* ClockKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClockKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/ClockKit.framework; sourceTree = DEVELOPER_DIR; };
 		F61782FC1E47313A00462509 /* ScheduleRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleRowController.swift; sourceTree = "<group>"; };
+		F61783001E475AE100462509 /* TalkRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkRowController.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -334,6 +335,7 @@
 				F61782FC1E47313A00462509 /* ScheduleRowController.swift */,
 				F61782CD1E4728D200462509 /* Assets.xcassets */,
 				F61782CF1E4728D200462509 /* Info.plist */,
+				F61783001E475AE100462509 /* TalkRowController.swift */,
 			);
 			path = "iOS.Conf Extension";
 			sourceTree = "<group>";
@@ -368,7 +370,6 @@
 		F67E529E1E452075004518B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F61782F51E472A7500462509 /* ClockKit.framework */,
 				F61782E11E4728F900462509 /* CloudKit.framework */,
 				F60A02B81E4601180050B7BA /* StoreKit.framework */,
 				F67E52A71E45D17D004518B6 /* MapKit.framework */,
@@ -811,6 +812,7 @@
 			files = (
 				F61782CC1E4728D200462509 /* ExtensionDelegate.swift in Sources */,
 				F61782FD1E47313A00462509 /* ScheduleRowController.swift in Sources */,
+				F61783011E475AE100462509 /* TalkRowController.swift in Sources */,
 				F61782CA1E4728D200462509 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

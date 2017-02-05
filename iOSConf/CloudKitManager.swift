@@ -16,7 +16,8 @@ public class CloudKitManager: NSObject {
     
     public func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
-        let query = CKQuery(recordType: "Speakers", predicate: NSPredicate(format: "TRUEPREDICATE"))
+        let query = CKQuery(recordType: "Speakers", predicate: NSPredicate(value: true))
+        query.sortDescriptors = [NSSortDescriptor(key: "Weight", ascending: true)]
         let queryOperation = CKQueryOperation(query: query)
         
         Log.printThis("Start fetch")
@@ -56,7 +57,8 @@ public class CloudKitManager: NSObject {
     
     public func fetchTalks(_ completion:@escaping (_ speakers:[ScheduleItem]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
-        let query = CKQuery(recordType: "Talks", predicate: NSPredicate(format: "TRUEPREDICATE"))
+        let query = CKQuery(recordType: "Talks", predicate: NSPredicate(value: true))
+        query.sortDescriptors = [NSSortDescriptor(key: "Weight", ascending: true)]
         let queryOperation = CKQueryOperation(query: query)
         
         Log.printThis("Start fetch")

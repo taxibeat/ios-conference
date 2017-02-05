@@ -57,10 +57,10 @@ class InterfaceController: WKInterfaceController {
                 }
             }
         }
-        //testTabel()
+        //testTable()
     }
     
-    func testTabel() {
+    func testTable() {
         self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow", ScheduleTableRowType.scheduleRow.rawValue])
         
         

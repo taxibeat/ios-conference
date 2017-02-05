@@ -29,9 +29,6 @@ public class CloudKitManager: NSObject {
         
         queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor?, error: Error?) in
             if error != nil {
-                DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
                 completion(nil, error)
             } else {
                 var speakerArray = [Speaker]()
@@ -72,9 +69,6 @@ public class CloudKitManager: NSObject {
         
         queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor?, error: Error?) in
             if error != nil {
-                DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
                 completion(nil, error)
             } else {
                 var talksArray = [ScheduleItem]()

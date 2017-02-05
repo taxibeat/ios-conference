@@ -43,6 +43,12 @@ public class CloudKitManager: NSObject {
                         speakerArray.append(newSpeaker)
                     }
                 }
+                
+                speakerArray.sort {
+                    guard let weight1 = $0.weight, let weight2 = $1.weight else { return false }
+                    return weight1 < weight2
+                }
+                
                 completion(speakerArray, nil)
             }
         }

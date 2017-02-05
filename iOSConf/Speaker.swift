@@ -14,14 +14,7 @@ public struct Speaker {
     public var position: String?
     public var bio: String?
     public var avatar: CKAsset?
-    
-    public var avatarImage: UIImage? {
-        if let fileAsset = avatar {
-            let data = try! Data(contentsOf: fileAsset.fileURL)
-            return UIImage(data: data)
-        }
-        return nil
-    }
+    public var avatarImage: UIImage?
     
     public init?(record: CKRecord) {
         guard let theName = record.object(forKey: "Name") as? String,
@@ -33,5 +26,10 @@ public struct Speaker {
         self.position = thePosition
         self.bio = theBio
         self.avatar = theAvatar
+        
+        if let fileAsset = avatar {
+            let data = try! Data(contentsOf: fileAsset.fileURL)
+            self.avatarImage = UIImage(data: data)
+        }
     }
 }

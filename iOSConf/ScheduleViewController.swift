@@ -39,6 +39,8 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
                             self.tableViewHeightConstraint.constant = self.getTableViewHeight()
                         }
                     }
+                } else {
+                    self.showConnectionErrorAlert(error)
                 }
             })
         }
@@ -50,8 +52,21 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
-    func getTableViewHeight() -> CGFloat{
+    func showConnectionErrorAlert(_ error: Error?) {
+        let alert = UIAlertController(title: "Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "ΟΚ", style: .cancel) { (action) in
+
+        }
         
+        alert.addAction(cancelAction)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true) {
+            }
+        }
+    }
+    
+    func getTableViewHeight() -> CGFloat{
         tableView.reloadData()
         tableView.layoutIfNeeded()
         
@@ -66,6 +81,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         
         shadowView.layer.cornerRadius = 10.0
     }
+    
+    
+    // MARK: - Table view delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return talks.count

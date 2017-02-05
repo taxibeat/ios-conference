@@ -12,8 +12,8 @@ import TBConfFramework
 class LaunchViewController: ConferenceViewController {
 
     @IBOutlet private weak var magicButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var welcomeLabel: UILabel!
     
     
     // MARK: View lifecycle
@@ -41,8 +41,7 @@ class LaunchViewController: ConferenceViewController {
                 }
                 
                 DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.welcomeLabel.text = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                    self.hideActivity()
                     UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
                         self.magicButton.alpha = 1.0
                         self.magicButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
@@ -51,6 +50,8 @@ class LaunchViewController: ConferenceViewController {
                         
                     })
                 }
+            } else {
+                self.showConnectionErrorAlert(error)
             }
         }
         
@@ -61,6 +62,26 @@ class LaunchViewController: ConferenceViewController {
                 }
             }
         }
+    }
+    
+    func showConnectionErrorAlert(_ error: Error?) {
+        let alert = UIAlertController(title: "Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "ΟΚ", style: .cancel) { (action) in
+            self.magicButton.alpha = 1.0
+            self.hideActivity()
+        }
+        
+        alert.addAction(cancelAction)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true) {
+            }
+        }
+    }
+    
+    func hideActivity() {
+        self.activityIndicator.stopAnimating()
+        self.welcomeLabel.text = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
     }
     
     // MARK: Button styling

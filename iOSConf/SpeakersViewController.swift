@@ -13,7 +13,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
 
     @IBOutlet private weak var tableView: UITableView!
     var speakers: [Speaker]?
-    var expandedCellIndex: Int?
+    private var expandedCellIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,47 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 60.0, 0.0)
         
-        speakers = CloudKitManager.sharedInstance.speakers
+        if let theSpeakers = CloudKitManager.sharedInstance.speakers {
+            speakers = theSpeakers
+            tableView.reloadData()
+        } else {
+            CloudKitManager.sharedInstance.fetchSpeakers { (speakers, error) in
+                if error == nil {
+                    if let theSpeakers = speakers {
+                        CloudKitManager.sharedInstance.speakers = theSpeakers
+                        self.speakers = CloudKitManager.sharedInstance.speakers
+                        
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                } else {
+                    self.showConnectionErrorAlert(error)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func showConnectionErrorAlert(_ error: Error?) {
+        let alert = UIAlertController(title: "Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "ΟΚ", style: .cancel) { (action) in
+            
+        }
+        
+        alert.addAction(cancelAction)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true) {
+            }
+        }
+    }
+    
+    // MARK: - Table view delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if speakers == nil {
@@ -89,16 +123,5 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
             tableView.reloadData()
         }
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

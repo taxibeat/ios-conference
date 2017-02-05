@@ -34,7 +34,6 @@
 		F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E52A71E45D17D004518B6 /* MapKit.framework */; };
 		F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52A91E45D21C004518B6 /* VenueViewController.swift */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
-		F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */; };
 		F6AA7F491E43B8CC007C55E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F471E43B8CC007C55E0 /* Main.storyboard */; };
 		F6AA7F4B1E43B8CC007C55E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */; };
 		F6AA7F4E1E43B8CC007C55E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F4C1E43B8CC007C55E0 /* LaunchScreen.storyboard */; };
@@ -124,7 +123,6 @@
 		F67E52A91E45D21C004518B6 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F6AA7F481E43B8CC007C55E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6AA7F4D1E43B8CC007C55E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				F67E529A1E451AF3004518B6 /* Assets */,
 				F67E52951E451823004518B6 /* Helpers */,
 				F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */,
-				F6AA7F451E43B8CC007C55E0 /* SecondViewController.swift */,
 				F67E52931E4515BC004518B6 /* LaunchViewController.swift */,
 				F67E52A91E45D21C004518B6 /* VenueViewController.swift */,
 				F60A02EA1E46260C0050B7BA /* ScheduleViewController.swift */,
@@ -556,7 +553,6 @@
 			files = (
 				F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */,
 				F60A02F11E4653310050B7BA /* SpeakerTableViewCell.swift in Sources */,
-				F6AA7F461E43B8CC007C55E0 /* SecondViewController.swift in Sources */,
 				F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */,
 				F60A02ED1E4633E60050B7BA /* ScheduleTableViewCell.swift in Sources */,
 				F67E52A61E454CA3004518B6 /* ConferenceTabBarViewController.swift in Sources */,
@@ -904,6 +900,7 @@
 				F60A02DF1E461F1C0050B7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F60A02E11E461F1C0050B7BA /* Build configuration list for PBXNativeTarget "TBConfFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -912,6 +909,7 @@
 				F60A02E31E461F1C0050B7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6AA7F391E43B8CC007C55E0 /* Build configuration list for PBXProject "iOSConf" */ = {
 			isa = XCConfigurationList;

@@ -57,7 +57,7 @@ public class CloudKitManager: NSObject {
         database.add(queryOperation)
     }
     
-    public func fetchTalks(_ completion:@escaping (_ speakers:[ScheduleItem]?, _ error: Error?) -> ()) {
+    public func fetchTalks(_ completion:@escaping (_ talks:[ScheduleItem]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
         let query = CKQuery(recordType: "Talks", predicate: NSPredicate(format: "TRUEPREDICATE"))
         let queryOperation = CKQueryOperation(query: query)

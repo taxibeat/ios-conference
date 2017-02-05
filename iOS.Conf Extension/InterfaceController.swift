@@ -23,23 +23,42 @@ class InterfaceController: WKInterfaceController {
         CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
             if let theTalks = talks {
                 self.talksArray = theTalks
-                self.scheduleTable.setNumberOfRows(self.talksArray.count, withRowType: "scheduleRow")
-                for (index, value) in self.talksArray.enumerated() {
-                    if value.hasSpeaker == true {
-                        if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
-                            row.talkSpeakerLabel.setText(value.speakerName)
-                            row.talkTimeLabel.setText(value.timeString)
-                            row.talkTitleLabel.setText(value.description)
-                        }
+                
+                var rowTypes = [String]()
+                for talk in theTalks {
+                    if talk.hasSpeaker == true {
+                        rowTypes.append("scheduleRow")
                     } else {
-                        if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
-                            row.talkTime.setText(value.timeString)
-                            row.talkTitle.setText(value.description)
+                        rowTypes.append("noSpeakerRow")
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.scheduleTable.setRowTypes(rowTypes)
+                    for (index, value) in self.talksArray.enumerated() {
+                        if value.hasSpeaker == true {
+                            if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
+                                row.talkSpeakerLabel.setText(value.speakerName)
+                                row.talkTimeLabel.setText(value.timeString)
+                                row.talkTitleLabel.setText(value.description)
+                            }
+                        } else {
+                            if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
+                                row.talkTime.setText(value.timeString)
+                                row.talkTitle.setText(value.description)
+                            }
                         }
                     }
                 }
             }
         }
+        //testTabel()
+    }
+    
+    func testTabel() {
+        self.scheduleTable.setRowTypes(["scheduleRow", "noSpeakerRow"])
+        
+        
     }
     
     override func willActivate() {

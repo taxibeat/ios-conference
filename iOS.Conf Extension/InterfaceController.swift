@@ -16,6 +16,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var scheduleTable: WKInterfaceTable!
     var talksArray = [ScheduleItem]()
+    
+    enum ScheduleTableRowType: String {
+        case scheduleRow = "scheduleRow"
+        case noSpeakerRow = "noSpeakerRow"
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -27,9 +32,9 @@ class InterfaceController: WKInterfaceController {
                 var rowTypes = [String]()
                 for talk in theTalks {
                     if talk.hasSpeaker == true {
-                        rowTypes.append("scheduleRow")
+                        rowTypes.append(ScheduleTableRowType.scheduleRow.rawValue)
                     } else {
-                        rowTypes.append("noSpeakerRow")
+                        rowTypes.append(ScheduleTableRowType.noSpeakerRow.rawValue)
                     }
                 }
                 
@@ -56,7 +61,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func testTabel() {
-        self.scheduleTable.setRowTypes(["scheduleRow", "noSpeakerRow"])
+        self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow", ScheduleTableRowType.scheduleRow.rawValue])
         
         
     }

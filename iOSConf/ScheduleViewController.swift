@@ -37,6 +37,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
                     if let theTalks = talks {
                         self.talks = theTalks
                         DispatchQueue.main.async {
+                            self.hasFixedTableHeight = false
                             self.tableViewHeightConstraint.constant = self.getTableViewHeight()
                         }
                     }

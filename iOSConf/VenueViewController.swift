@@ -47,6 +47,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
         styleVenueContainer()
         addVenuePin()
         
+        mapView.isRotateEnabled = false
         venueNameLabel.text = venue.venueName
         venueAddressLabel.text = venue.address
     }
@@ -127,6 +128,27 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
                 self?.present(storeViewController, animated: true, completion: nil)
             }
         }
+    }
+    
+    
+    // MARK: Mapview Delegate
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
+            annotationView?.canShowCallout = false
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        annotationView?.image = UIImage(named: "venueicon")
+        
+        return annotationView
     }
     
     

@@ -92,7 +92,12 @@ public class CloudKitManager: NSObject {
             }
         }
         
-        let database: CKDatabase = CKContainer.default().publicCloudDatabase
-        database.add(queryOperation)
+        #if os(watchOS)
+            let database: CKDatabase = CKContainer(identifier:"iCloud.com.taxibeat.iOSConf").publicCloudDatabase
+            database.add(queryOperation)
+        #else
+            let database: CKDatabase = CKContainer.default().publicCloudDatabase
+            database.add(queryOperation)
+        #endif
     }
 }

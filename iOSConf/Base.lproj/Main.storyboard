@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="0.0" y="68" width="326" height="95"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZQw-Sg-xeY" id="s78-B4-ebO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="94"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="94.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41-10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-PL-Otp">
@@ -134,7 +134,7 @@
                                                 <rect key="frame" x="0.0" y="163" width="326" height="155"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdS-Ok-8JY" id="iij-PA-uAO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="154"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="154.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41-10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtn-cZ-ov8">

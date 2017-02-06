@@ -23,6 +23,24 @@
 		F60A02EF1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */; };
 		F60A02F11E4653310050B7BA /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02F01E4653310050B7BA /* SpeakerTableViewCell.swift */; };
 		F60A02F31E4653450050B7BA /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02F21E4653450050B7BA /* SpeakersViewController.swift */; };
+		F61782BC1E4728D100462509 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61782BA1E4728D100462509 /* Interface.storyboard */; };
+		F61782BE1E4728D100462509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61782BD1E4728D100462509 /* Assets.xcassets */; };
+		F61782C51E4728D200462509 /* iOS.Conf Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F61782C41E4728D200462509 /* iOS.Conf Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F61782CA1E4728D200462509 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61782C91E4728D200462509 /* InterfaceController.swift */; };
+		F61782CC1E4728D200462509 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61782CB1E4728D200462509 /* ExtensionDelegate.swift */; };
+		F61782CE1E4728D200462509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61782CD1E4728D200462509 /* Assets.xcassets */; };
+		F61782D21E4728D200462509 /* iOS.Conf.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F61782B81E4728D100462509 /* iOS.Conf.app */; };
+		F61782E21E4728F900462509 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61782E11E4728F900462509 /* CloudKit.framework */; };
+		F61782EC1E472A6500462509 /* TBConfFrameworkWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = F61782EA1E472A6500462509 /* TBConfFrameworkWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F61782EF1E472A6500462509 /* TBConfFrameworkWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */; };
+		F61782F01E472A6500462509 /* TBConfFrameworkWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F61782F71E472A7F00462509 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61782E11E4728F900462509 /* CloudKit.framework */; };
+		F61782F81E472A8A00462509 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BF1E4616970050B7BA /* Log.swift */; };
+		F61782F91E472A8D00462509 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BB1E460E740050B7BA /* Speaker.swift */; };
+		F61782FA1E472A9000462509 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */; };
+		F61782FB1E472A9300462509 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02E81E4623280050B7BA /* ScheduleItem.swift */; };
+		F61782FD1E47313A00462509 /* ScheduleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61782FC1E47313A00462509 /* ScheduleRowController.swift */; };
+		F61783011E475AE100462509 /* TalkRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61783001E475AE100462509 /* TalkRowController.swift */; };
 		F67E52941E4515BC004518B6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52931E4515BC004518B6 /* LaunchViewController.swift */; };
 		F67E52971E451835004518B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52961E451835004518B6 /* GradientView.swift */; };
 		F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52981E45188F004518B6 /* ConstraintsHandler.swift */; };
@@ -63,6 +81,27 @@
 			remoteGlobalIDString = F60A02C51E461F1B0050B7BA;
 			remoteInfo = TBConfFramework;
 		};
+		F61782C61E4728D200462509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6AA7F361E43B8CC007C55E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F61782C31E4728D200462509;
+			remoteInfo = "iOS.Conf Extension";
+		};
+		F61782D01E4728D200462509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6AA7F361E43B8CC007C55E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F61782B71E4728D100462509;
+			remoteInfo = iOS.Conf;
+		};
+		F61782ED1E472A6500462509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6AA7F361E43B8CC007C55E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F61782E71E472A6400462509;
+			remoteInfo = TBConfFrameworkWatch;
+		};
 		F6AA7F551E43B8CD007C55E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6AA7F361E43B8CC007C55E0 /* Project object */;
@@ -91,6 +130,39 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F61782D81E4728D200462509 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F61782C51E4728D200462509 /* iOS.Conf Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782DA1E4728D200462509 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F61782D21E4728D200462509 /* iOS.Conf.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782F41E472A6500462509 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F61782F01E472A6500462509 /* TBConfFrameworkWatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +182,22 @@
 		F60A02EE1E4633F80050B7BA /* ScheduleSpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		F60A02F01E4653310050B7BA /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		F60A02F21E4653450050B7BA /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		F61782B81E4728D100462509 /* iOS.Conf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.Conf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61782BB1E4728D100462509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F61782BD1E4728D100462509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F61782BF1E4728D100462509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61782C41E4728D200462509 /* iOS.Conf Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOS.Conf Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61782C91E4728D200462509 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F61782CB1E4728D200462509 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F61782CD1E4728D200462509 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F61782CF1E4728D200462509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61782E01E4728F700462509 /* iOS.Conf Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iOS.Conf Extension.entitlements"; sourceTree = "<group>"; };
+		F61782E11E4728F900462509 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBConfFrameworkWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61782EA1E472A6500462509 /* TBConfFrameworkWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBConfFrameworkWatch.h; sourceTree = "<group>"; };
+		F61782EB1E472A6500462509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61782FC1E47313A00462509 /* ScheduleRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleRowController.swift; sourceTree = "<group>"; };
+		F61783001E475AE100462509 /* TalkRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkRowController.swift; sourceTree = "<group>"; };
 		F67E52931E4515BC004518B6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F67E52961E451835004518B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F67E52981E45188F004518B6 /* ConstraintsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHandler.swift; sourceTree = "<group>"; };
@@ -149,6 +237,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60A02CF1E461F1C0050B7BA /* TBConfFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782C11E4728D200462509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782E21E4728F900462509 /* CloudKit.framework in Frameworks */,
+				F61782EF1E472A6500462509 /* TBConfFrameworkWatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782E41E472A6400462509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782F71E472A7F00462509 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +316,39 @@
 			path = TBConfFrameworkTests;
 			sourceTree = "<group>";
 		};
+		F61782B91E4728D100462509 /* iOS.Conf */ = {
+			isa = PBXGroup;
+			children = (
+				F61782BA1E4728D100462509 /* Interface.storyboard */,
+				F61782BD1E4728D100462509 /* Assets.xcassets */,
+				F61782BF1E4728D100462509 /* Info.plist */,
+			);
+			path = iOS.Conf;
+			sourceTree = "<group>";
+		};
+		F61782C81E4728D200462509 /* iOS.Conf Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F61782E01E4728F700462509 /* iOS.Conf Extension.entitlements */,
+				F61782C91E4728D200462509 /* InterfaceController.swift */,
+				F61782CB1E4728D200462509 /* ExtensionDelegate.swift */,
+				F61782FC1E47313A00462509 /* ScheduleRowController.swift */,
+				F61783001E475AE100462509 /* TalkRowController.swift */,
+				F61782CD1E4728D200462509 /* Assets.xcassets */,
+				F61782CF1E4728D200462509 /* Info.plist */,
+			);
+			path = "iOS.Conf Extension";
+			sourceTree = "<group>";
+		};
+		F61782E91E472A6500462509 /* TBConfFrameworkWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F61782EA1E472A6500462509 /* TBConfFrameworkWatch.h */,
+				F61782EB1E472A6500462509 /* Info.plist */,
+			);
+			path = TBConfFrameworkWatch;
+			sourceTree = "<group>";
+		};
 		F67E52951E451823004518B6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +370,7 @@
 		F67E529E1E452075004518B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F61782E11E4728F900462509 /* CloudKit.framework */,
 				F60A02B81E4601180050B7BA /* StoreKit.framework */,
 				F67E52A71E45D17D004518B6 /* MapKit.framework */,
 				F67E529F1E452075004518B6 /* CloudKit.framework */,
@@ -247,6 +386,9 @@
 				F6AA7F621E43B8CD007C55E0 /* iOSConfUITests */,
 				F60A02C71E461F1B0050B7BA /* TBConfFramework */,
 				F60A02D41E461F1C0050B7BA /* TBConfFrameworkTests */,
+				F61782B91E4728D100462509 /* iOS.Conf */,
+				F61782C81E4728D200462509 /* iOS.Conf Extension */,
+				F61782E91E472A6500462509 /* TBConfFrameworkWatch */,
 				F6AA7F3F1E43B8CC007C55E0 /* Products */,
 				F67E529E1E452075004518B6 /* Frameworks */,
 			);
@@ -260,6 +402,9 @@
 				F6AA7F5F1E43B8CD007C55E0 /* iOSConfUITests.xctest */,
 				F60A02C61E461F1B0050B7BA /* TBConfFramework.framework */,
 				F60A02CE1E461F1C0050B7BA /* TBConfFrameworkTests.xctest */,
+				F61782B81E4728D100462509 /* iOS.Conf.app */,
+				F61782C41E4728D200462509 /* iOS.Conf Extension.appex */,
+				F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +462,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F61782E51E472A6400462509 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782EC1E472A6500462509 /* TBConfFrameworkWatch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +510,60 @@
 			productReference = F60A02CE1E461F1C0050B7BA /* TBConfFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F61782B71E4728D100462509 /* iOS.Conf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61782D91E4728D200462509 /* Build configuration list for PBXNativeTarget "iOS.Conf" */;
+			buildPhases = (
+				F61782B61E4728D100462509 /* Resources */,
+				F61782D81E4728D200462509 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F61782C71E4728D200462509 /* PBXTargetDependency */,
+			);
+			name = iOS.Conf;
+			productName = iOS.Conf;
+			productReference = F61782B81E4728D100462509 /* iOS.Conf.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F61782C31E4728D200462509 /* iOS.Conf Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61782D71E4728D200462509 /* Build configuration list for PBXNativeTarget "iOS.Conf Extension" */;
+			buildPhases = (
+				F61782C01E4728D200462509 /* Sources */,
+				F61782C11E4728D200462509 /* Frameworks */,
+				F61782C21E4728D200462509 /* Resources */,
+				F61782F41E472A6500462509 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F61782EE1E472A6500462509 /* PBXTargetDependency */,
+			);
+			name = "iOS.Conf Extension";
+			productName = "iOS.Conf Extension";
+			productReference = F61782C41E4728D200462509 /* iOS.Conf Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		F61782E71E472A6400462509 /* TBConfFrameworkWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61782F11E472A6500462509 /* Build configuration list for PBXNativeTarget "TBConfFrameworkWatch" */;
+			buildPhases = (
+				F61782E31E472A6400462509 /* Sources */,
+				F61782E41E472A6400462509 /* Frameworks */,
+				F61782E51E472A6400462509 /* Headers */,
+				F61782E61E472A6400462509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBConfFrameworkWatch;
+			productName = TBConfFrameworkWatch;
+			productReference = F61782E81E472A6400462509 /* TBConfFrameworkWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F6AA7F3D1E43B8CC007C55E0 /* iOSConf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6AA7F681E43B8CD007C55E0 /* Build configuration list for PBXNativeTarget "iOSConf" */;
@@ -365,11 +572,13 @@
 				F6AA7F3B1E43B8CC007C55E0 /* Frameworks */,
 				F6AA7F3C1E43B8CC007C55E0 /* Resources */,
 				F60A02E01E461F1C0050B7BA /* Embed Frameworks */,
+				F61782DA1E4728D200462509 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F60A02DA1E461F1C0050B7BA /* PBXTargetDependency */,
+				F61782D11E4728D200462509 /* PBXTargetDependency */,
 			);
 			name = iOSConf;
 			productName = iOSConf;
@@ -433,6 +642,29 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = F6AA7F3D1E43B8CC007C55E0;
 					};
+					F61782B71E4728D100462509 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PMW49D46PG;
+						ProvisioningStyle = Automatic;
+					};
+					F61782C31E4728D200462509 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PMW49D46PG;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					F61782E71E472A6400462509 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PMW49D46PG;
+						ProvisioningStyle = Automatic;
+					};
 					F6AA7F3D1E43B8CC007C55E0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PMW49D46PG;
@@ -481,6 +713,9 @@
 				F6AA7F5E1E43B8CD007C55E0 /* iOSConfUITests */,
 				F60A02C51E461F1B0050B7BA /* TBConfFramework */,
 				F60A02CD1E461F1C0050B7BA /* TBConfFrameworkTests */,
+				F61782B71E4728D100462509 /* iOS.Conf */,
+				F61782C31E4728D200462509 /* iOS.Conf Extension */,
+				F61782E71E472A6400462509 /* TBConfFrameworkWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -494,6 +729,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F60A02CC1E461F1C0050B7BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782B61E4728D100462509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782BE1E4728D100462509 /* Assets.xcassets in Resources */,
+				F61782BC1E4728D100462509 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782C21E4728D200462509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782CE1E4728D200462509 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782E61E472A6400462509 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -544,6 +803,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60A02D61E461F1C0050B7BA /* TBConfFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782C01E4728D200462509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782CC1E4728D200462509 /* ExtensionDelegate.swift in Sources */,
+				F61782FD1E47313A00462509 /* ScheduleRowController.swift in Sources */,
+				F61783011E475AE100462509 /* TalkRowController.swift in Sources */,
+				F61782CA1E4728D200462509 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F61782E31E472A6400462509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61782F81E472A8A00462509 /* Log.swift in Sources */,
+				F61782FB1E472A9300462509 /* ScheduleItem.swift in Sources */,
+				F61782F91E472A8D00462509 /* Speaker.swift in Sources */,
+				F61782FA1E472A9000462509 /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +882,21 @@
 			target = F60A02C51E461F1B0050B7BA /* TBConfFramework */;
 			targetProxy = F60A02D91E461F1C0050B7BA /* PBXContainerItemProxy */;
 		};
+		F61782C71E4728D200462509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F61782C31E4728D200462509 /* iOS.Conf Extension */;
+			targetProxy = F61782C61E4728D200462509 /* PBXContainerItemProxy */;
+		};
+		F61782D11E4728D200462509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F61782B71E4728D100462509 /* iOS.Conf */;
+			targetProxy = F61782D01E4728D200462509 /* PBXContainerItemProxy */;
+		};
+		F61782EE1E472A6500462509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F61782E71E472A6400462509 /* TBConfFrameworkWatch */;
+			targetProxy = F61782ED1E472A6500462509 /* PBXContainerItemProxy */;
+		};
 		F6AA7F561E43B8CD007C55E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6AA7F3D1E43B8CC007C55E0 /* iOSConf */;
@@ -614,6 +910,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F61782BA1E4728D100462509 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61782BB1E4728D100462509 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		F6AA7F471E43B8CC007C55E0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -706,6 +1010,130 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSConf.app/iOSConf";
+			};
+			name = Release;
+		};
+		F61782D31E4728D200462509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				IBSC_MODULE = iOS_Conf_Extension;
+				INFOPLIST_FILE = iOS.Conf/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		F61782D41E4728D200462509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				IBSC_MODULE = iOS_Conf_Extension;
+				INFOPLIST_FILE = iOS.Conf/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		F61782D51E4728D200462509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "iOS.Conf Extension/iOS.Conf Extension.entitlements";
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				INFOPLIST_FILE = "iOS.Conf Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		F61782D61E4728D200462509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "iOS.Conf Extension/iOS.Conf Extension.entitlements";
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				INFOPLIST_FILE = "iOS.Conf Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.iOSConf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		F61782F21E472A6500462509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TBConfFrameworkWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.TBConfFrameworkWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		F61782F31E472A6500462509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PMW49D46PG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TBConfFrameworkWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taxibeat.TBConfFrameworkWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -910,6 +1338,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F61782D71E4728D200462509 /* Build configuration list for PBXNativeTarget "iOS.Conf Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61782D51E4728D200462509 /* Debug */,
+				F61782D61E4728D200462509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F61782D91E4728D200462509 /* Build configuration list for PBXNativeTarget "iOS.Conf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61782D31E4728D200462509 /* Debug */,
+				F61782D41E4728D200462509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F61782F11E472A6500462509 /* Build configuration list for PBXNativeTarget "TBConfFrameworkWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61782F21E472A6500462509 /* Debug */,
+				F61782F31E472A6500462509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F6AA7F391E43B8CC007C55E0 /* Build configuration list for PBXProject "iOSConf" */ = {
 			isa = XCConfigurationList;

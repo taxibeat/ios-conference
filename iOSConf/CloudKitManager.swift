@@ -16,12 +16,13 @@ public class CloudKitManager: NSObject {
     
     public func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
-        let query = CKQuery(recordType: "Speakers", predicate: NSPredicate(format: "TRUEPREDICATE"))
+        let query = CKQuery(recordType: "Speakers", predicate: NSPredicate(value: true))
+        query.sortDescriptors = [NSSortDescriptor(key: "Weight", ascending: true)]
         let queryOperation = CKQueryOperation(query: query)
         
         Log.printThis("Start fetch")
         
-        queryOperation.recordFetchedBlock = { (record: CKRecord!) -> () in
+        queryOperation.recordFetchedBlock = { (record: CKRecord!) in
             items.append(record)
         }
         
@@ -29,9 +30,6 @@ public class CloudKitManager: NSObject {
         
         queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor?, error: Error?) in
             if error != nil {
-                DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
                 completion(nil, error)
             } else {
                 var speakerArray = [Speaker]()
@@ -59,12 +57,13 @@ public class CloudKitManager: NSObject {
     
     public func fetchTalks(_ completion:@escaping (_ talks:[ScheduleItem]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
-        let query = CKQuery(recordType: "Talks", predicate: NSPredicate(format: "TRUEPREDICATE"))
+        let query = CKQuery(recordType: "Talks", predicate: NSPredicate(value: true))
+        query.sortDescriptors = [NSSortDescriptor(key: "Weight", ascending: true)]
         let queryOperation = CKQueryOperation(query: query)
         
         Log.printThis("Start fetch")
         
-        queryOperation.recordFetchedBlock = { (record: CKRecord!) -> () in
+        queryOperation.recordFetchedBlock = { (record: CKRecord!) in
             items.append(record)
         }
         
@@ -72,9 +71,6 @@ public class CloudKitManager: NSObject {
         
         queryOperation.queryCompletionBlock = { (cursor: CKQueryCursor?, error: Error?) in
             if error != nil {
-                DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
                 completion(nil, error)
             } else {
                 var talksArray = [ScheduleItem]()
@@ -96,7 +92,12 @@ public class CloudKitManager: NSObject {
             }
         }
         
-        let database: CKDatabase = CKContainer.default().publicCloudDatabase
-        database.add(queryOperation)
+        #if os(watchOS)
+            let database: CKDatabase = CKContainer(identifier:"iCloud.com.taxibeat.iOSConf").publicCloudDatabase
+            database.add(queryOperation)
+        #else
+            let database: CKDatabase = CKContainer.default().publicCloudDatabase
+            database.add(queryOperation)
+        #endif
     }
 }

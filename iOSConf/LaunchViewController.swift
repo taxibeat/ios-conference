@@ -15,6 +15,11 @@ class LaunchViewController: ConferenceViewController {
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var welcomeLabel: UILabel!
     
+    struct welcomeText {
+        static let fetchText = "Fetching one more thing..."
+        static let introText = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+    }
+    
     
     // MARK: View lifecycle
     
@@ -23,7 +28,7 @@ class LaunchViewController: ConferenceViewController {
 
         styleMagicButton()
         activityIndicator.startAnimating()
-        welcomeLabel.text = "Fetching one more thing..."
+        welcomeLabel.text = welcomeText.fetchText
         self.magicButton.alpha = 0.0
         fetchDataFromCloudKit()
     }
@@ -81,7 +86,7 @@ class LaunchViewController: ConferenceViewController {
     
     func hideActivity() {
         self.activityIndicator.stopAnimating()
-        self.welcomeLabel.text = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        self.welcomeLabel.text = welcomeText.introText
     }
     
     // MARK: Button styling

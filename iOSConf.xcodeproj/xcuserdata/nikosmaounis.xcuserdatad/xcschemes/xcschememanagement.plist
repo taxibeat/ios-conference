@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>TBConfFrameworkWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>iOS.Conf.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>iOSConf.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>F60A02CD1E461F1C0050B7BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F61782B71E4728D100462509</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F61782E71E472A6400462509</key>
 		<dict>
 			<key>primary</key>
 			<true/>

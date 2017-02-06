@@ -14,6 +14,7 @@ import TBConfFrameworkWatch
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet var fetchDataLabel: WKInterfaceLabel!
     @IBOutlet var scheduleTable: WKInterfaceTable!
     var talksArray = [ScheduleItem]()
     
@@ -39,6 +40,7 @@ class InterfaceController: WKInterfaceController {
                 }
                 
                 DispatchQueue.main.async {
+                    self.fetchDataLabel.setAlpha(0.0)
                     self.scheduleTable.setRowTypes(rowTypes)
                     for (index, value) in self.talksArray.enumerated() {
                         if value.hasSpeaker == true {
@@ -57,10 +59,12 @@ class InterfaceController: WKInterfaceController {
                 }
             }
         }
-       // testTable()
+
+//        testTable()
     }
     
     func testTable() {
+        self.fetchDataLabel.setAlpha(0.0)
         self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow", ScheduleTableRowType.scheduleRow.rawValue])
         
         

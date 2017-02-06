@@ -78,8 +78,12 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="center" verticalAlignment="center" text="Fetching data..." textAlignment="center" id="if8-yb-zKu">
+                            <color key="textColor" red="0.023529411760000001" green="0.7843137255" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
                     </items>
                     <connections>
+                        <outlet property="fetchDataLabel" destination="if8-yb-zKu" id="d8j-cr-VAm"/>
                         <outlet property="scheduleTable" destination="PRP-IT-gqY" id="47K-M0-Hx9"/>
                     </connections>
                 </controller>

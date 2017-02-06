@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +43,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group2" translatesAutoresizingMaskIntoConstraints="NO" id="MWI-db-rku">
-                                <rect key="frame" x="41" y="177" width="292" height="123"/>
+                                <rect key="frame" x="41" y="172" width="292" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="292" id="Ewj-aG-BKN"/>
                                     <constraint firstAttribute="height" constant="123" id="zOo-Yz-Lll"/>
@@ -54,7 +53,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="IS4-HZ-wyu" secondAttribute="bottom" constant="43" id="3ZQ-Bg-ggE"/>
-                            <constraint firstItem="MWI-db-rku" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-95" id="5MU-Ih-sVa"/>
+                            <constraint firstItem="MWI-db-rku" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="5MU-Ih-sVa"/>
                             <constraint firstItem="7U7-3T-5QB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NKB-u6-kTg"/>
                             <constraint firstItem="IS4-HZ-wyu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Vav-UL-HR8"/>
                             <constraint firstItem="iJb-97-IP8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="73" id="XY0-2Z-fLo"/>

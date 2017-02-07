@@ -7,20 +7,41 @@
 //
 
 import UIKit
+import EventKit
 import TBConfFramework
 
 class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var headerDateLabel: UILabel!
-    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tableViewToLogoVerticalSpaceConstraint: NSLayoutConstraint!
-    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var headerDateLabel: UILabel!
+    @IBOutlet private weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewToLogoVerticalSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var shadowView: UIView!
+    @IBOutlet private weak var addToCalendarButton: UIButton!
     
     let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     var talks = [ScheduleItem]()
     var hasFixedTableHeight = false
+    
+    lazy var eventStartDate: Date? = {
+        let dateString = "2017-03-08T07:41:18Z"
+        return dateString.dateFromISO8601
+    }()
+    
+    lazy var eventEndDate: Date? = {
+        let dateString = "2017-03-08T15:30:18Z"
+        return dateString.dateFromISO8601
+    }()
+    
+    lazy var headerDate: String = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE dd MMMM, yyyy"
+        guard let evDate = self.eventStartDate else { return "" }
+        return formatter.string(from: evDate)
+    }()
+    
+    // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +74,6 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //initialAnimation()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -77,6 +92,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: Initial animation
+    
     func initialAnimation() {
         tableViewToLogoVerticalSpaceConstraint.constant = logoToTableDefaultConstraintConstant
         
@@ -85,6 +103,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         }) { (completed) in
         }
     }
+    
+    
+    // MARK: Connection error alert
     
     func showConnectionErrorAlert(_ error: Error?) {
         let alert = UIAlertController(title: "Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
@@ -99,6 +120,108 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
             }
         }
     }
+    
+    
+    // MARK: Save event to calndar
+    
+    @IBAction func addToCalendarTapped(_ sender: Any) {
+        saveToCalendar()
+    }
+    
+    func saveToCalendar() {
+        let store = EKEventStore()
+        store.requestAccess(to: .event) { (granted, error) in
+            if granted {
+                let event = EKEvent(eventStore: store)
+                event.title = "iOS.Conf"
+                
+                guard let sDate = self.eventStartDate, let eDate = self.eventEndDate else {
+                    return
+                }
+                
+                event.startDate = sDate
+                event.endDate = eDate
+                event.calendar = store.defaultCalendarForNewEvents
+                
+                let predicate = store.predicateForEvents(withStart: sDate, end: eDate, calendars: nil)
+                let foundEvents = store.events(matching: predicate)
+                
+                var found = false
+                for event in foundEvents {
+                    if event.title == "iOS.Conf" && event.startDate == sDate && event.endDate == eDate {
+                        found = true
+                    }
+                }
+                
+                if found == true {
+                    DispatchQueue.main.async {
+                        self.animateSavedToCalendar()
+                    }
+                } else {
+                    do {
+                        try store.save(event, span: .thisEvent)
+                        DispatchQueue.main.async {
+                            self.animateSavedToCalendar()
+                        }
+                    } catch {
+                        
+                    }
+                }
+            } else {
+                self.showCalendarErrorAlert(error)
+            }
+        }
+        
+    }
+    
+    func showCalendarErrorAlert(_ error: Error?) {
+        let alert = UIAlertController(title: "Something went wrong", message: "We need calendar access in order to save the event for you. Go to settings and give access to calendars for iOS.Conf", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (action) in
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!, options: [ : ], completionHandler: { Success in
+                    
+                })
+            } else {
+                UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
+            }
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(settingsAction)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true) {
+            }
+        }
+    }
+
+    
+    func animateSavedToCalendar() {
+        self.headerDateLabel.layer.add(self.labelTransition(), forKey: "kCATransitionFade")
+        self.headerDateLabel.text = "Saved!"
+        self.headerDateLabel.layer.removeAllAnimations()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.headerDateLabel.layer.removeAllAnimations()
+            self.headerDateLabel.layer.add(self.labelTransition(), forKey: "kCATransitionFade")
+            self.headerDateLabel.text = self.headerDate
+        }
+    }
+    
+    func labelTransition() -> CATransition {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.type = kCATransitionFade
+        animation.duration = 0.65
+        
+        return animation
+    }
+    
+    // MARK: TableView styling
     
     func getTableViewHeight() -> CGFloat {
         self.tableViewHeightConstraint.constant = 1300

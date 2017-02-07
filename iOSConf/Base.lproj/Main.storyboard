@@ -86,11 +86,21 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6a-lb-zYi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
+                                                    <connections>
+                                                        <action selector="addToCalendarTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1oz-WX-agj"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="V6a-lb-zYi" firstAttribute="height" secondItem="fZ4-u4-V6Z" secondAttribute="height" id="6VF-Ff-ZvU"/>
+                                                <constraint firstItem="V6a-lb-zYi" firstAttribute="centerX" secondItem="fZ4-u4-V6Z" secondAttribute="centerX" id="C8V-ry-5Qr"/>
                                                 <constraint firstItem="Qpp-9d-cJH" firstAttribute="centerY" secondItem="fZ4-u4-V6Z" secondAttribute="centerY" id="GK5-4A-9hP"/>
                                                 <constraint firstAttribute="trailing" secondItem="Qpp-9d-cJH" secondAttribute="trailing" constant="5" id="QGB-N0-JIe"/>
+                                                <constraint firstItem="V6a-lb-zYi" firstAttribute="centerY" secondItem="fZ4-u4-V6Z" secondAttribute="centerY" id="iac-hp-LQP"/>
+                                                <constraint firstItem="V6a-lb-zYi" firstAttribute="width" secondItem="fZ4-u4-V6Z" secondAttribute="width" id="pKE-23-5Ra"/>
                                                 <constraint firstItem="Qpp-9d-cJH" firstAttribute="leading" secondItem="fZ4-u4-V6Z" secondAttribute="leading" constant="5" id="uSl-ft-Fad"/>
                                             </constraints>
                                         </view>
@@ -235,6 +245,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="addToCalendarButton" destination="V6a-lb-zYi" id="XSQ-Nr-XzQ"/>
                         <outlet property="headerDateLabel" destination="Qpp-9d-cJH" id="fBn-gS-HxD"/>
                         <outlet property="scrollView" destination="3p5-KN-2DV" id="Zao-i0-J2Z"/>
                         <outlet property="shadowView" destination="csJ-G9-s41" id="aAG-X3-HWz"/>
@@ -703,8 +714,6 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="cdx-rt-Lyk" id="0FZ-ML-ql6"/>
-                        <outlet property="confLogoHeightConstraint" destination="hbC-DG-iAv" id="das-Jf-sIq"/>
-                        <outlet property="confLogoWidthConstraint" destination="b8K-Mj-aFj" id="XfG-KP-Fng"/>
                         <outlet property="logoImageView" destination="R0f-DY-zki" id="IxV-0J-k5Z"/>
                         <outlet property="logoVerticalAlignConstraint" destination="xEF-QI-G56" id="Vj8-LT-gnS"/>
                         <outlet property="magicButton" destination="FKn-4U-U9i" id="qGA-A2-ERS"/>

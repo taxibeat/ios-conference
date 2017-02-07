@@ -14,14 +14,9 @@ class LaunchViewController: ConferenceViewController {
     @IBOutlet private weak var magicButton: UIButton!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var welcomeLabel: UILabel!
-    @IBOutlet private weak var confLogoHeightConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var confLogoWidthConstraint: NSLayoutConstraint!
     @IBOutlet private weak var logoVerticalAlignConstraint: NSLayoutConstraint!
     @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var poweredByView: UIView!
-    
-    let finalLogoWidthConstant: CGFloat = 146.0
-    let finalLogoHeightConstant: CGFloat = 54.0
     
     struct welcomeText {
         static let fetchText = "Fetching one more thing..."

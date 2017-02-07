@@ -51,6 +51,8 @@
 		F67E52A61E454CA3004518B6 /* ConferenceTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52A51E454CA3004518B6 /* ConferenceTabBarViewController.swift */; };
 		F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67E52A71E45D17D004518B6 /* MapKit.framework */; };
 		F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E52A91E45D21C004518B6 /* VenueViewController.swift */; };
+		F69DC33A1E4A576B00E55742 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69DC3391E4A576B00E55742 /* EventKit.framework */; };
+		F69DC33C1E4A594500E55742 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DC33B1E4A594500E55742 /* DateExtensions.swift */; };
 		F6AA7F421E43B8CC007C55E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */; };
 		F6AA7F491E43B8CC007C55E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F471E43B8CC007C55E0 /* Main.storyboard */; };
 		F6AA7F4B1E43B8CC007C55E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F4A1E43B8CC007C55E0 /* Assets.xcassets */; };
@@ -209,6 +211,8 @@
 		F67E52A51E454CA3004518B6 /* ConferenceTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTabBarViewController.swift; sourceTree = "<group>"; };
 		F67E52A71E45D17D004518B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F67E52A91E45D21C004518B6 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		F69DC3391E4A576B00E55742 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		F69DC33B1E4A594500E55742 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		F6AA7F3E1E43B8CC007C55E0 /* iOSConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F411E43B8CC007C55E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6AA7F481E43B8CC007C55E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69DC33A1E4A576B00E55742 /* EventKit.framework in Frameworks */,
 				F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */,
 				F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */,
 				F67E52A01E452075004518B6 /* CloudKit.framework in Frameworks */,
@@ -355,6 +360,7 @@
 				F67E52961E451835004518B6 /* GradientView.swift */,
 				F67E52981E45188F004518B6 /* ConstraintsHandler.swift */,
 				F67E52A31E454414004518B6 /* UIImageHelpers.swift */,
+				F69DC33B1E4A594500E55742 /* DateExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 		F67E529E1E452075004518B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F69DC3391E4A576B00E55742 /* EventKit.framework */,
 				F61782E11E4728F900462509 /* CloudKit.framework */,
 				F60A02B81E4601180050B7BA /* StoreKit.framework */,
 				F67E52A71E45D17D004518B6 /* MapKit.framework */,
@@ -839,6 +846,7 @@
 				F67E52A61E454CA3004518B6 /* ConferenceTabBarViewController.swift in Sources */,
 				F67E52971E451835004518B6 /* GradientView.swift in Sources */,
 				F67E52A41E454414004518B6 /* UIImageHelpers.swift in Sources */,
+				F69DC33C1E4A594500E55742 /* DateExtensions.swift in Sources */,
 				F67E52991E45188F004518B6 /* ConstraintsHandler.swift in Sources */,
 				F67E52AA1E45D21C004518B6 /* VenueViewController.swift in Sources */,
 				F67E52A21E4536D0004518B6 /* ConferenceViewController.swift in Sources */,
@@ -1346,6 +1354,7 @@
 				F61782D61E4728D200462509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F61782D91E4728D200462509 /* Build configuration list for PBXNativeTarget "iOS.Conf" */ = {
 			isa = XCConfigurationList;
@@ -1354,6 +1363,7 @@
 				F61782D41E4728D200462509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F61782F11E472A6500462509 /* Build configuration list for PBXNativeTarget "TBConfFrameworkWatch" */ = {
 			isa = XCConfigurationList;
@@ -1362,6 +1372,7 @@
 				F61782F31E472A6500462509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6AA7F391E43B8CC007C55E0 /* Build configuration list for PBXProject "iOSConf" */ = {
 			isa = XCConfigurationList;

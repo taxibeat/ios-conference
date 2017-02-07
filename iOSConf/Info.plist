@@ -46,5 +46,7 @@
 	<array>
 		<string>taxibeat</string>
 	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>We need access to your Calendar in order to save the event there for you</string>
 </dict>
 </plist>

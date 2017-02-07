@@ -27,7 +27,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
         static let venueName = "Gazarte"
     }
     
-    lazy var taxibeatButtonTitle: NSAttributedString = {
+    private lazy var taxibeatButtonTitle: NSAttributedString = {
         let attrText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Get me here with  ", attributes:[NSFontAttributeName: UIFont.systemFont(ofSize: 16.0), NSForegroundColorAttributeName: UIColor.white]))
         let imageAttachment = NSTextAttachment()
         let image = #imageLiteral(resourceName: "taxibeatLogo").maskWithColor(color: UIColor.white)?.resizedImageWithinRect(rectSize: CGSize(width: 80, height: 15.8))

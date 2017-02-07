@@ -20,26 +20,27 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet private weak var shadowView: UIView!
     @IBOutlet private weak var addToCalendarButton: UIButton!
     
-    let logoToTableDefaultConstraintConstant: CGFloat = 24.0
-    var talks = [ScheduleItem]()
-    var hasFixedTableHeight = false
+    private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
+    private var talks = [ScheduleItem]()
+    private var hasFixedTableHeight = false
     
-    lazy var eventStartDate: Date? = {
+    private lazy var eventStartDate: Date? = {
         let dateString = "2017-03-08T07:41:18Z"
         return dateString.dateFromISO8601
     }()
     
-    lazy var eventEndDate: Date? = {
+    private lazy var eventEndDate: Date? = {
         let dateString = "2017-03-08T15:30:18Z"
         return dateString.dateFromISO8601
     }()
     
-    lazy var headerDate: String = {
+    private lazy var headerDate: String = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE dd MMMM, yyyy"
         guard let evDate = self.eventStartDate else { return "" }
         return formatter.string(from: evDate)
     }()
+    
     
     // MARK: View lifecycle
     

@@ -111,12 +111,18 @@ class LaunchViewController: ConferenceViewController {
     }
     
     @IBAction func magicButtonTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: { 
+            self.poweredByView.alpha = 0.0
+            self.magicButton.alpha = 0.0
+            self.welcomeLabel.alpha = 0.0
+        }) { (finished) in
+        }
+        
         self.logoVerticalAlignConstraint.constant = 73.5 - UIScreen.main.bounds.size.height/2
-        self.poweredByView.alpha = 0.0
         UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
             self.logoImageView.transform = CGAffineTransform(scaleX: 0.49, y: 0.49)
             self.view.layoutIfNeeded()
-        }) { (success) in
+        }) { (finished) in
             self.performSegue(withIdentifier: "presentTabConSegue", sender: sender)
         }
     }

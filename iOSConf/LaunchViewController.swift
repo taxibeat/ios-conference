@@ -14,6 +14,14 @@ class LaunchViewController: ConferenceViewController {
     @IBOutlet private weak var magicButton: UIButton!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var confLogoHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var confLogoWidthConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var logoVerticalAlignConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var logoImageView: UIImageView!
+    @IBOutlet private weak var poweredByView: UIView!
+    
+    let finalLogoWidthConstant: CGFloat = 146.0
+    let finalLogoHeightConstant: CGFloat = 54.0
     
     struct welcomeText {
         static let fetchText = "Fetching one more thing..."
@@ -101,9 +109,27 @@ class LaunchViewController: ConferenceViewController {
         self.magicButton.insertSubview(gradient, at: 0)
         ConstraintsHandler.constrain(view: self.magicButton, toView: gradient)
     }
-
+    
+    @IBAction func magicButtonTapped(_ sender: Any) {
+        self.logoVerticalAlignConstraint.constant = 73.5 - UIScreen.main.bounds.size.height/2
+        self.poweredByView.alpha = 0.0
+        UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+            self.logoImageView.transform = CGAffineTransform(scaleX: 0.49, y: 0.49)
+            self.view.layoutIfNeeded()
+        }) { (success) in
+            self.performSegue(withIdentifier: "presentTabConSegue", sender: sender)
+        }
+    }
     
     // MARK: - Navigation
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "presentTabConSegue" {
+            return false
+        }
+        
+        return true
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

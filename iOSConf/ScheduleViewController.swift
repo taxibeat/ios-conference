@@ -80,7 +80,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     func initialAnimation() {
         tableViewToLogoVerticalSpaceConstraint.constant = logoToTableDefaultConstraintConstant
         
-        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
             self.view.layoutIfNeeded()
         }) { (completed) in
         }

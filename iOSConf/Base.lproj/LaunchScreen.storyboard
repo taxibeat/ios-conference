@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group3" translatesAutoresizingMaskIntoConstraints="NO" id="7U7-3T-5QB">
-                                <rect key="frame" x="0.0" y="4" width="157" height="156"/>
+                                <rect key="frame" x="0.0" y="24" width="157" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="ch6-JM-NUk"/>
                                     <constraint firstAttribute="width" constant="157" id="fYy-NC-yTU"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="iJb-97-IP8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="73" id="XY0-2Z-fLo"/>
                             <constraint firstItem="MWI-db-rku" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oWO-iu-Pdo"/>
                             <constraint firstAttribute="trailing" secondItem="iJb-97-IP8" secondAttribute="trailing" id="tXJ-Zs-WLa"/>
-                            <constraint firstItem="7U7-3T-5QB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="4" id="urc-dL-1BS"/>
+                            <constraint firstItem="7U7-3T-5QB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="24" id="urc-dL-1BS"/>
                         </constraints>
                     </view>
                 </viewController>

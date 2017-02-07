@@ -592,7 +592,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group3" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-0a-C1B">
-                                <rect key="frame" x="0.0" y="4" width="157" height="156"/>
+                                <rect key="frame" x="0.0" y="24" width="157" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="0yv-YI-4UH"/>
                                     <constraint firstAttribute="width" constant="157" id="Sls-yF-D3U"/>
@@ -622,7 +622,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STD-Wd-nRX">
-                                        <rect key="frame" x="84.5" y="-29" width="80" height="81"/>
+                                        <rect key="frame" x="84.5" y="-30" width="80" height="81"/>
                                         <fontDescription key="fontDescription" name="taxibeat" family="taxibeat" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -669,7 +669,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ExG-GC-cUd"/>
+                                    <action selector="magicButtonTapped:" destination="2IN-nY-QV5" eventType="touchUpInside" id="rqn-46-4KW"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="presentTabConSegue" animates="NO" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ExG-GC-cUd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -678,7 +679,7 @@
                             <constraint firstItem="R0f-DY-zki" firstAttribute="centerX" secondItem="zTg-fd-H1K" secondAttribute="centerX" id="8JR-yy-XwQ"/>
                             <constraint firstAttribute="trailing" secondItem="FKn-4U-U9i" secondAttribute="trailing" constant="24" id="8f5-NT-lw7"/>
                             <constraint firstItem="0l3-Sg-KcQ" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="73" id="AqO-WI-xxI"/>
-                            <constraint firstItem="Vve-0a-C1B" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="4" id="BXQ-NA-emR"/>
+                            <constraint firstItem="Vve-0a-C1B" firstAttribute="top" secondItem="zTg-fd-H1K" secondAttribute="topMargin" constant="24" id="BXQ-NA-emR"/>
                             <constraint firstItem="bMA-dH-pQu" firstAttribute="centerY" secondItem="zTg-fd-H1K" secondAttribute="centerY" constant="120" id="DT2-ha-99W"/>
                             <constraint firstItem="8Bd-wh-oTJ" firstAttribute="top" secondItem="sOM-kJ-Zt1" secondAttribute="bottom" id="ENh-dh-9eW"/>
                             <constraint firstItem="gOE-t4-S4m" firstAttribute="top" secondItem="8Bd-wh-oTJ" secondAttribute="bottom" id="HHA-tA-hML"/>
@@ -702,7 +703,12 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="cdx-rt-Lyk" id="0FZ-ML-ql6"/>
+                        <outlet property="confLogoHeightConstraint" destination="hbC-DG-iAv" id="das-Jf-sIq"/>
+                        <outlet property="confLogoWidthConstraint" destination="b8K-Mj-aFj" id="XfG-KP-Fng"/>
+                        <outlet property="logoImageView" destination="R0f-DY-zki" id="IxV-0J-k5Z"/>
+                        <outlet property="logoVerticalAlignConstraint" destination="xEF-QI-G56" id="Vj8-LT-gnS"/>
                         <outlet property="magicButton" destination="FKn-4U-U9i" id="qGA-A2-ERS"/>
+                        <outlet property="poweredByView" destination="sOM-kJ-Zt1" id="rSs-wg-DBa"/>
                         <outlet property="welcomeLabel" destination="gOE-t4-S4m" id="d2w-KB-oyK"/>
                     </connections>
                 </viewController>

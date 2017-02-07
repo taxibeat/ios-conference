@@ -47,9 +47,9 @@ class LaunchViewController: ConferenceViewController {
                 
                 DispatchQueue.main.async {
                     self.hideActivity()
-                    UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                    UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+                        self.magicButton.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                         self.magicButton.alpha = 1.0
-                        self.magicButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                         self.magicButton.transform = CGAffineTransform.identity
                     }, completion: { (finished) in
                         

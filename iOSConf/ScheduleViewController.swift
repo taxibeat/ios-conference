@@ -15,8 +15,10 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerDateLabel: UILabel!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewToLogoVerticalSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak var shadowView: UIView!
     
+    let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     var talks = [ScheduleItem]()
     var hasFixedTableHeight = false
     
@@ -27,6 +29,8 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        tableViewToLogoVerticalSpaceConstraint.constant = UIScreen.main.bounds.size.height
         
         if let thetalks = CloudKitManager.sharedInstance.talks {
             self.talks = thetalks
@@ -49,11 +53,21 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //initialAnimation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        initialAnimation()
+    }
+    
     override func viewDidLayoutSubviews() {
         if !hasFixedTableHeight {
-            tableView.reloadData()
-            tableView.layoutIfNeeded()
-            self.tableViewHeightConstraint.constant = tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top
+            self.tableViewHeightConstraint.constant = getTableViewHeight()
             hasFixedTableHeight = true
         }
     }
@@ -61,6 +75,15 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initialAnimation() {
+        tableViewToLogoVerticalSpaceConstraint.constant = logoToTableDefaultConstraintConstant
+        
+        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        }) { (completed) in
+        }
     }
     
     func showConnectionErrorAlert(_ error: Error?) {
@@ -77,17 +100,12 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         }
     }
     
-    func getTableViewHeight() -> CGFloat{
+    func getTableViewHeight() -> CGFloat {
+        self.tableViewHeightConstraint.constant = 1300
         tableView.reloadData()
         tableView.layoutIfNeeded()
         
-        var height = tableView.contentSize.height
-        let maxHeight = tableView.superview!.bounds.size.height - tableView.bounds.origin.y
-        
-        if height > maxHeight {
-            height = maxHeight
-        }
-        return height
+        return tableView.contentSize.height + tableView.contentInset.bottom + tableView.contentInset.top
     }
     
     func styleTable() {

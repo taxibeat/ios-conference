@@ -240,6 +240,7 @@
                         <outlet property="shadowView" destination="csJ-G9-s41" id="aAG-X3-HWz"/>
                         <outlet property="tableView" destination="SMs-kq-w1G" id="B4v-zi-Lqf"/>
                         <outlet property="tableViewHeightConstraint" destination="LYp-4b-00X" id="Q0Y-aA-1R1"/>
+                        <outlet property="tableViewToLogoVerticalSpaceConstraint" destination="iw7-eI-Pde" id="Rxm-Ed-e7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -612,7 +613,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOM-kJ-Zt1">
-                                <rect key="frame" x="123.5" y="310" width="129" height="21"/>
+                                <rect key="frame" x="106" y="310" width="164.5" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-mA-KKl">
                                         <rect key="frame" x="0.0" y="2" width="75.5" height="17"/>
@@ -621,7 +622,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STD-Wd-nRX">
-                                        <rect key="frame" x="84.5" y="-35.5" width="44.5" height="93.5"/>
+                                        <rect key="frame" x="84.5" y="-29" width="80" height="81"/>
                                         <fontDescription key="fontDescription" name="taxibeat" family="taxibeat" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

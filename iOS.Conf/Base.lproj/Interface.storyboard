@@ -82,13 +82,40 @@
                             <color key="textColor" red="0.023529411760000001" green="0.7843137255" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                     </items>
+                    <menu key="menu" id="pVM-Jw-7Ck">
+                        <items>
+                            <menuItem title="Menu Item" icon="info" id="g0O-oD-dBT">
+                                <connections>
+                                    <action selector="openVenuController" destination="AgC-eL-Hgc" id="rfI-dV-LcX"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="fetchDataLabel" destination="if8-yb-zKu" id="d8j-cr-VAm"/>
                         <outlet property="scheduleTable" destination="PRP-IT-gqY" id="47K-M0-Hx9"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="5" y="9"/>
+            <point key="canvasLocation" x="-127" y="9"/>
+        </scene>
+        <!--Venue-->
+        <scene sceneID="aaS-5Q-29B">
+            <objects>
+                <controller identifier="venueInterfaceController" title="Venue" id="aV0-db-HZA" customClass="VenueInterfaceController" customModule="iOS_Conf_Extension">
+                    <items>
+                        <map height="1" alignment="center" id="eJm-Ef-YJr"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="6h4-IF-lEQ">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="venueLabel" destination="6h4-IF-lEQ" id="HKj-lZ-c0X"/>
+                        <outlet property="venueMap" destination="eJm-Ef-YJr" id="y29-Oz-yzO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="149" y="7"/>
         </scene>
     </scenes>
 </document>

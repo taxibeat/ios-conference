@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AA549701E4BB4BE001F9D43 /* VenueInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5496F1E4BB4BE001F9D43 /* VenueInterfaceController.swift */; };
 		F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A02B81E4601180050B7BA /* StoreKit.framework */; };
 		F60A02CF1E461F1C0050B7BA /* TBConfFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A02C61E461F1B0050B7BA /* TBConfFramework.framework */; };
 		F60A02D61E461F1C0050B7BA /* TBConfFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A02D51E461F1C0050B7BA /* TBConfFrameworkTests.swift */; };
@@ -168,6 +169,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1AA5496F1E4BB4BE001F9D43 /* VenueInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueInterfaceController.swift; sourceTree = "<group>"; };
 		F60A02B81E4601180050B7BA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F60A02BB1E460E740050B7BA /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		F60A02BD1E46103F0050B7BA /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			children = (
 				F61782E01E4728F700462509 /* iOS.Conf Extension.entitlements */,
 				F61782C91E4728D200462509 /* InterfaceController.swift */,
+				1AA5496F1E4BB4BE001F9D43 /* VenueInterfaceController.swift */,
 				F61782CB1E4728D200462509 /* ExtensionDelegate.swift */,
 				F61782FC1E47313A00462509 /* ScheduleRowController.swift */,
 				F61783001E475AE100462509 /* TalkRowController.swift */,
@@ -817,6 +820,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA549701E4BB4BE001F9D43 /* VenueInterfaceController.swift in Sources */,
 				F61782CC1E4728D200462509 /* ExtensionDelegate.swift in Sources */,
 				F61782FD1E47313A00462509 /* ScheduleRowController.swift in Sources */,
 				F61783011E475AE100462509 /* TalkRowController.swift in Sources */,

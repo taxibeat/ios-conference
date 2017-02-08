@@ -222,6 +222,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         return animation
     }
     
+    
     // MARK: TableView styling
     
     func getTableViewHeight() -> CGFloat {

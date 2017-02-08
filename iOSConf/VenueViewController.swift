@@ -123,11 +123,13 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
         storeViewController.delegate = self
         
         let parameters = [SKStoreProductParameterITunesItemIdentifier : iTunesIdentifier]
-        storeViewController.loadProduct(withParameters: parameters) { [weak self] (loaded, error) -> Void in
-            if loaded {
-                self?.present(storeViewController, animated: true, completion: nil)
+        storeViewController.loadProduct(withParameters: parameters) { (loaded, error) -> Void in
+            if error != nil {
+                storeViewController.dismiss(animated: true, completion: nil)
             }
         }
+        
+        self.present(storeViewController, animated: true, completion: nil)
     }
     
     

@@ -11,7 +11,6 @@ import Foundation
 import CloudKit
 import TBConfFrameworkWatch
 
-
 class InterfaceController: WKInterfaceController {
     
     @IBOutlet var fetchDataLabel: WKInterfaceLabel!
@@ -27,41 +26,41 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-//        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
-//            if let theTalks = talks {
-//                self.talksArray = theTalks
-//                
-//                var rowTypes = [String]()
-//                for talk in theTalks {
-//                    if talk.hasSpeaker == true {
-//                        rowTypes.append(ScheduleTableRowType.scheduleRow.rawValue)
-//                    } else {
-//                        rowTypes.append(ScheduleTableRowType.noSpeakerRow.rawValue)
-//                    }
-//                }
-//                
-//                DispatchQueue.main.async {
-//                    self.fetchDataLabel.setAlpha(0.0)
-//                    self.scheduleTable.setRowTypes(rowTypes)
-//                    for (index, value) in self.talksArray.enumerated() {
-//                        if value.hasSpeaker == true {
-//                            if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
-//                                row.talkSpeakerLabel.setText(value.speakerName)
-//                                row.talkTimeLabel.setText(value.timeString)
-//                                row.talkTitleLabel.setText(value.description)
-//                            }
-//                        } else {
-//                            if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
-//                                row.talkTime.setText(value.timeString)
-//                                row.talkTitle.setText(value.description)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        CloudKitManager.sharedInstance.fetchTalks { (talks, error) in
+            if let theTalks = talks {
+                self.talksArray = theTalks
+                
+                var rowTypes = [String]()
+                for talk in theTalks {
+                    if talk.hasSpeaker == true {
+                        rowTypes.append(ScheduleTableRowType.scheduleRow.rawValue)
+                    } else {
+                        rowTypes.append(ScheduleTableRowType.noSpeakerRow.rawValue)
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.fetchDataLabel.setAlpha(0.0)
+                    self.scheduleTable.setRowTypes(rowTypes)
+                    for (index, value) in self.talksArray.enumerated() {
+                        if value.hasSpeaker == true {
+                            if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
+                                row.talkSpeakerLabel.setText(value.speakerName)
+                                row.talkTimeLabel.setText(value.timeString)
+                                row.talkTitleLabel.setText(value.description)
+                            }
+                        } else {
+                            if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
+                                row.talkTime.setText(value.timeString)
+                                row.talkTitle.setText(value.description)
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-        testTable()
+        //testTable()
     }
     
     func testTable() {

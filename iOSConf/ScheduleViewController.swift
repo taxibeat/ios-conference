@@ -133,34 +133,20 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
         let store = EKEventStore()
         store.requestAccess(to: .event) { (granted, error) in
             if granted {
-                let event = EKEvent(eventStore: store)
-                event.title = "iOS.Conf"
                 
                 guard let sDate = self.eventStartDate, let eDate = self.eventEndDate else {
                     return
                 }
                 
-                event.startDate = sDate
-                event.endDate = eDate
-                event.calendar = store.defaultCalendarForNewEvents
+                let confEvent = self.createEvent(store: store, startDate: sDate, endDate: eDate)
                 
-                let predicate = store.predicateForEvents(withStart: sDate, end: eDate, calendars: nil)
-                let foundEvents = store.events(matching: predicate)
-                
-                var found = false
-                for event in foundEvents {
-                    if event.title == "iOS.Conf" && event.startDate == sDate && event.endDate == eDate {
-                        found = true
-                    }
-                }
-                
-                if found == true {
+                if confEvent.found == true {
                     DispatchQueue.main.async {
                         self.animateSavedToCalendar()
                     }
                 } else {
                     do {
-                        try store.save(event, span: .thisEvent)
+                        try store.save(confEvent.event, span: .thisEvent)
                         DispatchQueue.main.async {
                             self.animateSavedToCalendar()
                         }
@@ -173,6 +159,26 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
             }
         }
         
+    }
+    
+    func createEvent(store:EKEventStore, startDate: Date, endDate: Date) -> (event: EKEvent, found: Bool) {
+        let event = EKEvent(eventStore: store)
+        event.title = "iOS.Conf"
+        event.startDate = startDate
+        event.endDate = endDate
+        event.calendar = store.defaultCalendarForNewEvents
+        
+        let predicate = store.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
+        let foundEvents = store.events(matching: predicate)
+        
+        var found = false
+        for ev in foundEvents {
+            if ev.title == "iOS.Conf" && ev.startDate == startDate && ev.endDate == endDate {
+                found = true
+            }
+        }
+        
+        return (event, found)
     }
     
     func showCalendarErrorAlert(_ error: Error?) {

@@ -457,7 +457,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46c-Eu-sZz">
                                                             <rect key="frame" x="0.0" y="0.0" width="329" height="354"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2TF-vr-CUV">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2TF-vr-CUV">
                                                                     <rect key="frame" x="88" y="40" width="152" height="152"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="152" id="D6e-c6-m5g"/>

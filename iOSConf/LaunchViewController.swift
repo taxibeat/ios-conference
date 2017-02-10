@@ -20,7 +20,7 @@ class LaunchViewController: ConferenceViewController {
     
     struct welcomeText {
         static let fetchText = "Fetching one more thing..."
-        static let introText = "Hello cocoageek, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        static let introText = "A unique opportunity to meet some of the most influential speakers and to learn and discuss about best practices and latest development methodologies."
     }
     
     

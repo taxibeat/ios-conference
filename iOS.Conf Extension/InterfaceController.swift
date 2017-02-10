@@ -65,13 +65,13 @@ class InterfaceController: WKInterfaceController {
     
     func testTable() {
         self.fetchDataLabel.setAlpha(0.0)
-        self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow", ScheduleTableRowType.scheduleRow.rawValue])
+        self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow"])
         
         
     }
     
     @IBAction func openVenuController() {
-        self.presentController(withName: "venueInterfaceController", context: nil)
+        self.pushController(withName: "venueInterfaceController", context: nil)
     }
     
     override func willActivate() {

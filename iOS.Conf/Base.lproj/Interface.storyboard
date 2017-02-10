@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--iOS.Conf-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iOS_Conf" customModuleProvider="target">
+                <controller identifier="iosconfmain" title="iOS.Conf" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iOS_Conf" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="PRP-IT-gqY">
                             <items>
@@ -21,18 +21,17 @@
                                         <items>
                                             <group width="3" height="1" alignment="left" radius="2" id="Vji-KG-ZmR">
                                                 <color key="backgroundColor" red="0.023529411760000001" green="0.7843137255" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                             </group>
                                             <group width="1" alignment="left" layout="vertical" spacing="1" id="jcE-hz-cQm">
                                                 <items>
-                                                    <label alignment="left" text="Data by itself is not enough, data needs poetry" textAlignment="left" numberOfLines="2" id="g5B-uB-Rua">
+                                                    <label alignment="left" text="Building a testable mixed-codebase iOS Framework" textAlignment="left" numberOfLines="2" id="g5B-uB-Rua">
                                                         <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                     </label>
                                                     <label alignment="left" text="Nick Maounis &amp; Chris Karaiskos" textAlignment="left" numberOfLines="2" id="Nla-J7-ll2">
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
-                                                    <label alignment="left" text="12:30 - 13:15" textAlignment="left" id="0Jj-2z-gge">
+                                                    <label alignment="left" text="12:00 - 13:45" textAlignment="left" id="0Jj-2z-gge">
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
@@ -41,6 +40,7 @@
                                             </group>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="colorLineGroup" destination="Vji-KG-ZmR" id="LdH-dY-ZIt"/>
@@ -57,10 +57,10 @@
                                             </group>
                                             <group width="1" alignment="left" layout="vertical" spacing="1" id="XQR-Ib-fHJ">
                                                 <items>
-                                                    <label alignment="left" text="Introduction and opening" textAlignment="left" numberOfLines="2" id="fh0-8e-71Q">
+                                                    <label alignment="left" text="Coffee &amp; socializing" textAlignment="left" numberOfLines="2" id="fh0-8e-71Q">
                                                         <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                     </label>
-                                                    <label alignment="left" text="9:41-10:00" id="MR8-uk-a8d">
+                                                    <label alignment="left" text="13:30 - 14:30" id="MR8-uk-a8d">
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
@@ -69,6 +69,7 @@
                                             </group>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="colorGroup" destination="GNC-Nb-gEr" id="Glg-lS-xCV"/>
@@ -84,7 +85,7 @@
                     </items>
                     <menu key="menu" id="pVM-Jw-7Ck">
                         <items>
-                            <menuItem title="Menu Item" icon="info" id="g0O-oD-dBT">
+                            <menuItem title="Venue" icon="info" id="g0O-oD-dBT">
                                 <connections>
                                     <action selector="openVenuController" destination="AgC-eL-Hgc" id="rfI-dV-LcX"/>
                                 </connections>

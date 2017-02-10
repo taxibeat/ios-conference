@@ -117,10 +117,10 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     func expandTableCell(cell: SpeakerTableViewCell, indexPath: IndexPath) {
         if cell.isExpanded == true {
             expandedCellIndex = nil
-            tableView.reloadData()
+            tableView.reloadSections([indexPath.section], with: .fade)
         } else {
             expandedCellIndex = indexPath.section
-            tableView.reloadData()
+            tableView.reloadSections([indexPath.section], with: .fade)
         }
     }
 

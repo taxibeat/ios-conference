@@ -59,15 +59,6 @@ class InterfaceController: WKInterfaceController {
                 }
             }
         }
-
-        //testTable()
-    }
-    
-    func testTable() {
-        self.fetchDataLabel.setAlpha(0.0)
-        self.scheduleTable.setRowTypes([ScheduleTableRowType.scheduleRow.rawValue, "noSpeakerRow"])
-        
-        
     }
     
     @IBAction func openVenuController() {

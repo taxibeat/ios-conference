@@ -35,4 +35,4 @@ struct CloudKitConstants {
 }
 ````````
 
-Create some records in the Public database using CloudKit dashboard and run the app. Not that you have to create the schema and the records on the CloudKit Development environment for being able to fetch data when running the app in debug mode through Xcode.
+Create some records in the Public database using CloudKit dashboard and run the app. Note that you have to create the schema and the records on the CloudKit Development environment for being able to fetch data when running the app in debug mode through Xcode.

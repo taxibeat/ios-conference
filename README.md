@@ -36,3 +36,9 @@ struct CloudKitConstants {
 ````````
 
 Create some records in the Public database using CloudKit dashboard and run the app. Note that you have to create the schema and the records on the CloudKit Development environment for being able to fetch data when running the app in debug mode through Xcode.
+
+The iOS app supports iOS 9 or higher and the watchOS app supports watchOS 3 or higher. According to Xcode release notes, CloudKit is not supported in the watchOS simulator:
+
+>CloudKit usage is blocked on watchOS Simulators. Running any test will throw a “Not Authenticated” error even though you are signed in via the paired iOS Simulator. Workaround: Use CloudKit on paired devices with watchOS 3 and iOS 10.
+
+If you want to run and play with the watchOS app you have to do it on a real device.

@@ -122,6 +122,7 @@ class LaunchViewController: ConferenceViewController {
         }
     }
     
+    
     // MARK: - Navigation
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

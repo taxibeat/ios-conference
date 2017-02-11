@@ -9,10 +9,18 @@
 import UIKit
 import CloudKit
 
+struct CloudKitConstants {
+    static let cloudKitContainerIdentifier = "iCloud.com.taxibeat.iOSConf"
+}
+
 public class CloudKitManager: NSObject {
     public static let sharedInstance = CloudKitManager()
     public var talks: [ScheduleItem]?
     public var speakers: [Speaker]?
+    
+    private override init() {
+        
+    }
     
     public func fetchSpeakers(_ completion:@escaping (_ speakers:[Speaker]?, _ error: Error?) -> ()) {
         var items: [CKRecord] = [CKRecord]()
@@ -93,7 +101,7 @@ public class CloudKitManager: NSObject {
         }
         
         #if os(watchOS)
-            let database: CKDatabase = CKContainer(identifier:"iCloud.com.taxibeat.iOSConf").publicCloudDatabase
+            let database: CKDatabase = CKContainer(identifier:CloudKitConstants.cloudKitContainerIdentifier).publicCloudDatabase
             database.add(queryOperation)
         #else
             let database: CKDatabase = CKContainer.default().publicCloudDatabase

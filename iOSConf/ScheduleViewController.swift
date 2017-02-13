@@ -19,6 +19,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet private weak var tableViewToLogoVerticalSpaceConstraint: NSLayoutConstraint!
     @IBOutlet private weak var shadowView: UIView!
     @IBOutlet private weak var addToCalendarButton: UIButton!
+    @IBOutlet private weak var tripstaButton: UIButton!
+    @IBOutlet private weak var travelplanetButton: UIButton!
+    @IBOutlet private weak var airticketsButton: UIButton!
     
     private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     private var talks = [ScheduleItem]()
@@ -273,5 +276,19 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
             return cell
         }
     }
+    
+    
+    // MARK: - Sponsors
+    
+    @IBAction func tripstaButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func travelplanetButtonTapped(_ sender: Any) {
+        
+    }
 
+    @IBAction func airticketsButtonTapped(_ sender: Any) {
+        
+    }
 }

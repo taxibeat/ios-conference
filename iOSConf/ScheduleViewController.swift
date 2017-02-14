@@ -8,9 +8,10 @@
 
 import UIKit
 import EventKit
+import SafariServices
 import TBConfFramework
 
-class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UITableViewDataSource {
+class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var scrollView: UIScrollView!
@@ -27,6 +28,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     private var talks = [ScheduleItem]()
     private var hasFixedTableHeight = false
+    private let sponsorTripstaUrl = "http://www.tripsta.com/?utm_source=cobrandedlogo&utm_medium=logo&%20&utm_campaign=taxibeat"
     
     private lazy var eventStartDate: Date? = {
         let dateString = "2017-03-08T07:41:18Z"
@@ -282,14 +284,29 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     // MARK: - Sponsors
     
     @IBAction func tripstaButtonTapped(_ sender: Any) {
-        
+        openSponsor()
     }
     
     @IBAction func travelplanetButtonTapped(_ sender: Any) {
-        
+        openSponsor()
     }
 
     @IBAction func airticketsButtonTapped(_ sender: Any) {
-        
+        openSponsor()
+    }
+    
+    func openSponsor() {
+        guard let url = URL(string: sponsorTripstaUrl) else { return }
+        let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
+        safariVC.delegate = self
+        safariVC.modalPresentationStyle = .overCurrentContext
+        self.present(safariVC, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: SFSafariViewController delegate
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

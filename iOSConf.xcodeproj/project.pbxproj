@@ -60,6 +60,7 @@
 		F6AA7F4E1E43B8CC007C55E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA7F4C1E43B8CC007C55E0 /* LaunchScreen.storyboard */; };
 		F6AA7F591E43B8CD007C55E0 /* iOSConfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F581E43B8CD007C55E0 /* iOSConfTests.swift */; };
 		F6AA7F641E43B8CD007C55E0 /* iOSConfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA7F631E43B8CD007C55E0 /* iOSConfUITests.swift */; };
+		F6FFFD681E5387D700B8FFDA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FFFD671E5387D700B8FFDA /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,7 @@
 		F6AA7F5F1E43B8CD007C55E0 /* iOSConfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSConfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AA7F631E43B8CD007C55E0 /* iOSConfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConfUITests.swift; sourceTree = "<group>"; };
 		F6AA7F651E43B8CD007C55E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6FFFD671E5387D700B8FFDA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FFFD681E5387D700B8FFDA /* SafariServices.framework in Frameworks */,
 				F69DC33A1E4A576B00E55742 /* EventKit.framework in Frameworks */,
 				F60A02B91E4601180050B7BA /* StoreKit.framework in Frameworks */,
 				F67E52A81E45D17D004518B6 /* MapKit.framework in Frameworks */,
@@ -379,6 +382,7 @@
 		F67E529E1E452075004518B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6FFFD671E5387D700B8FFDA /* SafariServices.framework */,
 				F69DC3391E4A576B00E55742 /* EventKit.framework */,
 				F61782E11E4728F900462509 /* CloudKit.framework */,
 				F60A02B81E4601180050B7BA /* StoreKit.framework */,

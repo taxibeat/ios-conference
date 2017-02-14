@@ -726,7 +726,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOM-kJ-Zt1">
-                                <rect key="frame" x="105.5" y="310" width="165" height="21"/>
+                                <rect key="frame" x="106" y="310" width="165" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-mA-KKl">
                                         <rect key="frame" x="0.0" y="2" width="76" height="17"/>
@@ -735,7 +735,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STD-Wd-nRX">
-                                        <rect key="frame" x="85" y="-29.5" width="80" height="81"/>
+                                        <rect key="frame" x="85" y="-29" width="80" height="81"/>
                                         <fontDescription key="fontDescription" name="taxibeat" family="taxibeat" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

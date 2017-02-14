@@ -22,6 +22,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet private weak var tripstaButton: UIButton!
     @IBOutlet private weak var travelplanetButton: UIButton!
     @IBOutlet private weak var airticketsButton: UIButton!
+    @IBOutlet private weak var sponsorsView: UIView!
     
     private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     private var talks = [ScheduleItem]()

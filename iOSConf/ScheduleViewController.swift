@@ -238,7 +238,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     // MARK: TableView styling
     
     func getTableViewHeight() -> CGFloat {
-        self.tableViewHeightConstraint.constant = 1300
+        self.tableViewHeightConstraint.constant = 1600
         tableView.reloadData()
         tableView.layoutIfNeeded()
         

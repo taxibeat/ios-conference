@@ -28,7 +28,15 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     private var talks = [ScheduleItem]()
     private var hasFixedTableHeight = false
-    private let sponsorTripstaUrl = "http://www.tripsta.com/?utm_source=cobrandedlogo&utm_medium=logo&%20&utm_campaign=taxibeat"
+    
+    struct sponsorLinks {
+        static let sponsorTripstaUrl = "http://www.tripsta.com/?utm_source=cobrandedlogo&utm_medium=logo&%20&utm_campaign=taxibeat"
+        static let airticketsUrl = "http://www.airtickets.gr/?utm_source=logo&utm_medium=logo&%20&utm_campaign=taxibeat"
+        static let travelPlanetUrl = "http://www.travelplanet24.com/?utm_source=logo&utm_medium=logo&%20&utm_campaign=taxibeat"
+        static let pirauesBankUrl = "http://www.piraeusbank.gr/el/Idiwtes"
+        static let winbankUrl = "http://www.piraeusbank.gr/el/idiwtes/trapezikes-ypiresies/e-banking/ilektronika-kanalia-eksypiretisis/winbank-web-banking?utm_source=taxibeat&utm_medium=referral&utm_content=ilektronika+kanalia&utm_campaign=button"
+        static let yellowsUrl = "http://yellow.piraeusbank.gr/el/yellow-programma-epivraveusis?utm_source=taxibeat&utm_medium=referral&utm_content=yellow_program&utm_campaign=button"
+    }
     
     private lazy var eventStartDate: Date? = {
         let dateString = "2017-03-08T07:41:18Z"
@@ -296,7 +304,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func openSponsor() {
-        guard let url = URL(string: sponsorTripstaUrl) else { return }
+        guard let url = URL(string: sponsorLinks.sponsorTripstaUrl) else { return }
         let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
         safariVC.delegate = self
         safariVC.modalPresentationStyle = .overCurrentContext

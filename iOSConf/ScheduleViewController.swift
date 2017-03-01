@@ -24,6 +24,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     @IBOutlet private weak var travelplanetButton: UIButton!
     @IBOutlet private weak var airticketsButton: UIButton!
     @IBOutlet private weak var sponsorsView: UIView!
+    @IBOutlet private weak var piraeusBankButton: UIButton!
+    @IBOutlet private weak var winbankButton: UIButton!
+    @IBOutlet private weak var yellowButton: UIButton!
     
     private let logoToTableDefaultConstraintConstant: CGFloat = 24.0
     private var talks = [ScheduleItem]()
@@ -301,6 +304,18 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
 
     @IBAction func airticketsButtonTapped(_ sender: Any) {
         openSponsor(urlString: sponsorLinks.airticketsUrl)
+    }
+    
+    @IBAction func piraeusBankButtonTapped(_ sender: Any) {
+        openSponsor(urlString: sponsorLinks.pirauesBankUrl)
+    }
+    
+    @IBAction func winbankButtonTapped(_ sender: Any) {
+        openSponsor(urlString: sponsorLinks.winbankUrl)
+    }
+    
+    @IBAction func yellowButtonTapped(_ sender: Any) {
+        openSponsor(urlString: sponsorLinks.yellowsUrl)
     }
     
     func openSponsor(urlString: String) {

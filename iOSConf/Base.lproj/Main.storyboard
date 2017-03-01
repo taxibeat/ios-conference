@@ -200,7 +200,7 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beu-Yc-oTN">
-                                        <rect key="frame" x="8" y="494" width="358" height="344"/>
+                                        <rect key="frame" x="8" y="494" width="358" height="579"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS.Conf powered by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-9C-1YL">
                                                 <rect key="frame" x="0.0" y="8" width="358" height="29"/>
@@ -221,41 +221,80 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piraeusBank" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-US-4Zf">
+                                                <rect key="frame" x="105" y="198" width="148" height="57"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="148" id="JDD-bZ-bb4"/>
+                                                    <constraint firstAttribute="height" constant="57" id="X2Z-AK-UrJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-hd-QAp">
+                                                <rect key="frame" x="105" y="198" width="148" height="57"/>
+                                                <connections>
+                                                    <action selector="piraeusBankButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="MrS-OL-V16"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winbank" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-2g-fYp">
+                                                <rect key="frame" x="105" y="275" width="148" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="148" id="lYa-y5-3ZG"/>
+                                                    <constraint firstAttribute="height" constant="53" id="y6j-bq-rDp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-6D-QVY">
+                                                <rect key="frame" x="105" y="275" width="148" height="53"/>
+                                                <connections>
+                                                    <action selector="winbankButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5Rj-et-GOf"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-CN-dcy">
+                                                <rect key="frame" x="105" y="348" width="148" height="65"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="fHN-iv-jKO"/>
+                                                    <constraint firstAttribute="width" constant="148" id="p8o-8C-Oo4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-Du-NIE">
+                                                <rect key="frame" x="105" y="348" width="148" height="65"/>
+                                                <connections>
+                                                    <action selector="yellowButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c0x-iJ-1v2"/>
+                                                </connections>
+                                            </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripstaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vYb-4M-dsb">
-                                                <rect key="frame" x="107.5" y="198" width="143" height="48"/>
+                                                <rect key="frame" x="107.5" y="433" width="143" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="143" id="Tq2-my-jyd"/>
                                                     <constraint firstAttribute="height" constant="48" id="WzF-Qz-1ux"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5b-AL-IRP">
-                                                <rect key="frame" x="107.5" y="198" width="143" height="48"/>
+                                                <rect key="frame" x="107.5" y="433" width="143" height="48"/>
                                                 <connections>
                                                     <action selector="tripstaButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EOa-zX-Tnk"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travelplanetLogoMobile" translatesAutoresizingMaskIntoConstraints="NO" id="Gmd-Cc-DBf">
-                                                <rect key="frame" x="107.5" y="260" width="143" height="30"/>
+                                                <rect key="frame" x="107.5" y="495" width="143" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="143" id="11o-Q6-Cg3"/>
                                                     <constraint firstAttribute="height" constant="30" id="iHT-XR-vLp"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxZ-Fy-utk">
-                                                <rect key="frame" x="107.5" y="260" width="143" height="30"/>
+                                                <rect key="frame" x="107.5" y="495" width="143" height="30"/>
                                                 <connections>
                                                     <action selector="travelplanetButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VDh-YH-9a5"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airticketsLogoMobile" translatesAutoresizingMaskIntoConstraints="NO" id="HGN-lJ-M8r">
-                                                <rect key="frame" x="105" y="304" width="148" height="32"/>
+                                                <rect key="frame" x="105" y="539" width="148" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="148" id="Ut1-oG-TEw"/>
                                                     <constraint firstAttribute="height" constant="32" id="eS3-Ml-Tz9"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfY-iG-Kes">
-                                                <rect key="frame" x="105" y="304" width="148" height="32"/>
+                                                <rect key="frame" x="105" y="539" width="148" height="32"/>
                                                 <connections>
                                                     <action selector="airticketsButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TPt-Jl-y4k"/>
                                                 </connections>
@@ -266,24 +305,38 @@
                                             <constraint firstItem="Gmd-Cc-DBf" firstAttribute="top" secondItem="vYb-4M-dsb" secondAttribute="bottom" constant="14" id="0l5-N3-1bv"/>
                                             <constraint firstItem="hfY-iG-Kes" firstAttribute="height" secondItem="HGN-lJ-M8r" secondAttribute="height" id="3fx-ca-rHA"/>
                                             <constraint firstItem="xxZ-Fy-utk" firstAttribute="centerY" secondItem="Gmd-Cc-DBf" secondAttribute="centerY" id="40H-Cq-bgX"/>
+                                            <constraint firstItem="WwR-hd-QAp" firstAttribute="width" secondItem="9Qw-US-4Zf" secondAttribute="width" id="5WM-IQ-MFe"/>
                                             <constraint firstItem="bNt-9C-1YL" firstAttribute="centerX" secondItem="beu-Yc-oTN" secondAttribute="centerX" id="69S-jw-WEU"/>
                                             <constraint firstItem="R6C-1B-lSj" firstAttribute="centerX" secondItem="beu-Yc-oTN" secondAttribute="centerX" id="6oY-C1-oXq"/>
+                                            <constraint firstItem="Nqa-2g-fYp" firstAttribute="top" secondItem="9Qw-US-4Zf" secondAttribute="bottom" constant="20" id="7XL-o9-j2h"/>
                                             <constraint firstItem="R6C-1B-lSj" firstAttribute="top" secondItem="Ip0-uD-ijB" secondAttribute="bottom" constant="60" id="A4c-hV-c8v"/>
-                                            <constraint firstItem="vYb-4M-dsb" firstAttribute="top" secondItem="R6C-1B-lSj" secondAttribute="bottom" constant="20" id="D3h-u6-F4d"/>
+                                            <constraint firstItem="WwR-hd-QAp" firstAttribute="height" secondItem="9Qw-US-4Zf" secondAttribute="height" id="B64-lt-25i"/>
                                             <constraint firstItem="xxZ-Fy-utk" firstAttribute="width" secondItem="Gmd-Cc-DBf" secondAttribute="width" id="DwD-Xh-PXc"/>
+                                            <constraint firstItem="rHg-6D-QVY" firstAttribute="centerX" secondItem="Nqa-2g-fYp" secondAttribute="centerX" id="FAY-IY-dMq"/>
+                                            <constraint firstItem="0Wg-Du-NIE" firstAttribute="centerY" secondItem="7OO-CN-dcy" secondAttribute="centerY" id="HPn-ZN-qEp"/>
                                             <constraint firstItem="U5b-AL-IRP" firstAttribute="height" secondItem="vYb-4M-dsb" secondAttribute="height" id="JA2-uJ-OTF"/>
                                             <constraint firstItem="Gmd-Cc-DBf" firstAttribute="centerX" secondItem="vYb-4M-dsb" secondAttribute="centerX" id="L90-kR-jkk"/>
                                             <constraint firstAttribute="trailing" secondItem="bNt-9C-1YL" secondAttribute="trailing" id="Mm9-E1-t2f"/>
                                             <constraint firstItem="U5b-AL-IRP" firstAttribute="width" secondItem="vYb-4M-dsb" secondAttribute="width" id="OAM-yT-xzC"/>
                                             <constraint firstItem="bNt-9C-1YL" firstAttribute="leading" secondItem="beu-Yc-oTN" secondAttribute="leading" id="ONO-kI-8Yv"/>
                                             <constraint firstItem="vYb-4M-dsb" firstAttribute="centerX" secondItem="R6C-1B-lSj" secondAttribute="centerX" id="OOG-yo-2xk"/>
+                                            <constraint firstItem="0Wg-Du-NIE" firstAttribute="centerX" secondItem="7OO-CN-dcy" secondAttribute="centerX" id="Oby-kb-p5F"/>
+                                            <constraint firstItem="rHg-6D-QVY" firstAttribute="width" secondItem="Nqa-2g-fYp" secondAttribute="width" id="PK2-u9-PUd"/>
+                                            <constraint firstItem="0Wg-Du-NIE" firstAttribute="width" secondItem="7OO-CN-dcy" secondAttribute="width" id="S4S-6o-jJb"/>
                                             <constraint firstItem="xxZ-Fy-utk" firstAttribute="centerX" secondItem="Gmd-Cc-DBf" secondAttribute="centerX" id="URa-d4-myJ"/>
+                                            <constraint firstItem="rHg-6D-QVY" firstAttribute="centerY" secondItem="Nqa-2g-fYp" secondAttribute="centerY" id="VqL-wF-FKo"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="HGN-lJ-M8r" secondAttribute="bottom" id="YJT-3P-bIY"/>
                                             <constraint firstItem="bNt-9C-1YL" firstAttribute="top" secondItem="beu-Yc-oTN" secondAttribute="topMargin" id="Z7W-5i-5IS"/>
                                             <constraint firstItem="xxZ-Fy-utk" firstAttribute="height" secondItem="Gmd-Cc-DBf" secondAttribute="height" id="aCG-Ab-ZHk"/>
                                             <constraint firstItem="HGN-lJ-M8r" firstAttribute="centerX" secondItem="Gmd-Cc-DBf" secondAttribute="centerX" id="bl0-2I-bUZ"/>
+                                            <constraint firstItem="vYb-4M-dsb" firstAttribute="top" secondItem="7OO-CN-dcy" secondAttribute="bottom" constant="20" id="c4M-nT-akc"/>
+                                            <constraint firstItem="9Qw-US-4Zf" firstAttribute="top" secondItem="R6C-1B-lSj" secondAttribute="bottom" constant="20" id="cHX-zd-t4X"/>
+                                            <constraint firstItem="9Qw-US-4Zf" firstAttribute="centerX" secondItem="R6C-1B-lSj" secondAttribute="centerX" id="gYO-cA-iAx"/>
+                                            <constraint firstItem="rHg-6D-QVY" firstAttribute="height" secondItem="Nqa-2g-fYp" secondAttribute="height" id="gk3-A1-dos"/>
                                             <constraint firstItem="hfY-iG-Kes" firstAttribute="centerY" secondItem="HGN-lJ-M8r" secondAttribute="centerY" id="iHf-10-XDk"/>
                                             <constraint firstItem="Ip0-uD-ijB" firstAttribute="top" secondItem="bNt-9C-1YL" secondAttribute="bottom" constant="20" id="iPu-hf-Jba"/>
+                                            <constraint firstItem="Nqa-2g-fYp" firstAttribute="centerX" secondItem="9Qw-US-4Zf" secondAttribute="centerX" id="iv5-Iy-syW"/>
+                                            <constraint firstItem="0Wg-Du-NIE" firstAttribute="height" secondItem="7OO-CN-dcy" secondAttribute="height" id="kG9-rS-ZHJ"/>
                                             <constraint firstItem="HGN-lJ-M8r" firstAttribute="top" secondItem="Gmd-Cc-DBf" secondAttribute="bottom" constant="14" id="kWq-tt-sEx"/>
                                             <constraint firstItem="U5b-AL-IRP" firstAttribute="centerX" secondItem="vYb-4M-dsb" secondAttribute="centerX" id="q6K-ja-3yU"/>
                                             <constraint firstItem="hfY-iG-Kes" firstAttribute="centerX" secondItem="HGN-lJ-M8r" secondAttribute="centerX" id="rG7-55-jxO"/>
@@ -291,6 +344,10 @@
                                             <constraint firstItem="Ip0-uD-ijB" firstAttribute="centerX" secondItem="bNt-9C-1YL" secondAttribute="centerX" id="sHe-dY-fLj"/>
                                             <constraint firstItem="U5b-AL-IRP" firstAttribute="centerY" secondItem="vYb-4M-dsb" secondAttribute="centerY" id="sq8-As-REt"/>
                                             <constraint firstItem="hfY-iG-Kes" firstAttribute="width" secondItem="HGN-lJ-M8r" secondAttribute="width" id="vT4-cB-cam"/>
+                                            <constraint firstItem="7OO-CN-dcy" firstAttribute="centerX" secondItem="Nqa-2g-fYp" secondAttribute="centerX" id="vrW-Rq-cNl"/>
+                                            <constraint firstItem="WwR-hd-QAp" firstAttribute="centerY" secondItem="9Qw-US-4Zf" secondAttribute="centerY" id="wDC-EJ-Npi"/>
+                                            <constraint firstItem="WwR-hd-QAp" firstAttribute="centerX" secondItem="9Qw-US-4Zf" secondAttribute="centerX" id="xzQ-Pc-pwD"/>
+                                            <constraint firstItem="7OO-CN-dcy" firstAttribute="top" secondItem="Nqa-2g-fYp" secondAttribute="bottom" constant="20" id="zBk-1X-4lc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -347,6 +404,7 @@
                         <outlet property="addToCalendarButton" destination="V6a-lb-zYi" id="XSQ-Nr-XzQ"/>
                         <outlet property="airticketsButton" destination="hfY-iG-Kes" id="3cU-lb-3L2"/>
                         <outlet property="headerDateLabel" destination="Qpp-9d-cJH" id="fBn-gS-HxD"/>
+                        <outlet property="piraeusBankButton" destination="WwR-hd-QAp" id="9kN-7h-aD0"/>
                         <outlet property="scrollView" destination="3p5-KN-2DV" id="Zao-i0-J2Z"/>
                         <outlet property="shadowView" destination="csJ-G9-s41" id="aAG-X3-HWz"/>
                         <outlet property="sponsorsView" destination="beu-Yc-oTN" id="0v2-gx-JQr"/>
@@ -355,6 +413,8 @@
                         <outlet property="tableViewToLogoVerticalSpaceConstraint" destination="iw7-eI-Pde" id="Rxm-Ed-e7l"/>
                         <outlet property="travelplanetButton" destination="xxZ-Fy-utk" id="JFl-y1-WD9"/>
                         <outlet property="tripstaButton" destination="U5b-AL-IRP" id="aYS-c2-8Fu"/>
+                        <outlet property="winbankButton" destination="rHg-6D-QVY" id="hPR-Gs-S7v"/>
+                        <outlet property="yellowButton" destination="0Wg-Du-NIE" id="xR2-Ms-FoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -727,7 +787,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOM-kJ-Zt1">
-                                <rect key="frame" x="106" y="310" width="165" height="21"/>
+                                <rect key="frame" x="105" y="310" width="165" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-mA-KKl">
                                         <rect key="frame" x="0.0" y="2" width="76" height="17"/>
@@ -855,9 +915,12 @@
         <image name="group3" width="177" height="178"/>
         <image name="group4" width="97" height="148"/>
         <image name="lCopy" width="160" height="32"/>
+        <image name="piraeusBank" width="148" height="57"/>
         <image name="rectangleCopy10" width="49" height="57"/>
         <image name="rectangleCopy6" width="98" height="133"/>
         <image name="travelplanetLogoMobile" width="143" height="29"/>
         <image name="tripstaLogo" width="143" height="44"/>
+        <image name="winbank" width="148" height="53"/>
+        <image name="yellow" width="148" height="65"/>
     </resources>
 </document>

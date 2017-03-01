@@ -30,7 +30,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     private var hasFixedTableHeight = false
     
     struct sponsorLinks {
-        static let sponsorTripstaUrl = "http://www.tripsta.com/?utm_source=cobrandedlogo&utm_medium=logo&%20&utm_campaign=taxibeat"
+        static let tripstaUrl = "http://www.tripsta.com/?utm_source=cobrandedlogo&utm_medium=logo&%20&utm_campaign=taxibeat"
         static let airticketsUrl = "http://www.airtickets.gr/?utm_source=logo&utm_medium=logo&%20&utm_campaign=taxibeat"
         static let travelPlanetUrl = "http://www.travelplanet24.com/?utm_source=logo&utm_medium=logo&%20&utm_campaign=taxibeat"
         static let pirauesBankUrl = "http://www.piraeusbank.gr/el/Idiwtes"
@@ -292,19 +292,19 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     // MARK: - Sponsors
     
     @IBAction func tripstaButtonTapped(_ sender: Any) {
-        openSponsor()
+        openSponsor(urlString: sponsorLinks.tripstaUrl)
     }
     
     @IBAction func travelplanetButtonTapped(_ sender: Any) {
-        openSponsor()
+        openSponsor(urlString: sponsorLinks.travelPlanetUrl)
     }
 
     @IBAction func airticketsButtonTapped(_ sender: Any) {
-        openSponsor()
+        openSponsor(urlString: sponsorLinks.airticketsUrl)
     }
     
-    func openSponsor() {
-        guard let url = URL(string: sponsorLinks.sponsorTripstaUrl) else { return }
+    func openSponsor(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
         let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
         safariVC.delegate = self
         safariVC.modalPresentationStyle = .overCurrentContext

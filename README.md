@@ -25,7 +25,7 @@ In order to build and run the project you need:
   * SpeakerPosition (`String`)
 *  Make sure that iCloud capability and CloudKit are turned on as shown in the image below and copy the container identifier.
 
-![CloudKit config](https://dl.dropboxusercontent.com/u/43740014/cloudkit.png)
+![CloudKit config](https://www.dropbox.com/s/zgs1afqnj9fjzaa/cloudkit.png?raw=1)
 
 Open `CloudKitManager.swift` and paste your indentifier in the `cloudKitContainerIdentifier` constant:
 

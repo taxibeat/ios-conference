@@ -33,7 +33,7 @@ Open `CloudKitManager.swift` and paste your indentifier in the `cloudKitContaine
 struct CloudKitConstants {
     static let cloudKitContainerIdentifier = "iCloud.com.taxibeat.iOSConf"
 }
-````````
+``````````
 
 Create some records in the Public database using CloudKit dashboard and run the app. Note that you have to create the schema and the records on the CloudKit Development environment for being able to fetch data when running the app in debug mode through Xcode.
 

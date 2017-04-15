@@ -1,7 +1,7 @@
 # iOS.Conf 
 iOS.Conf by Taxibeat app ⌚️📱
 
-##Requirements for running the project
+## Requirements for running the project
 In order to build and run the project you need:
 * Xcode 8
 * A paid membership in the Apple developer program

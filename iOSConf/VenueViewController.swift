@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import StoreKit
-import TBConfFramework
 
 class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductViewControllerDelegate {
 
@@ -28,7 +27,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
     }
     
     private lazy var taxibeatButtonTitle: NSAttributedString = {
-        let attrText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Take me there with  ", attributes:[NSFontAttributeName: UIFont.systemFont(ofSize: 16.0), NSForegroundColorAttributeName: UIColor.white]))
+        let attrText = NSMutableAttributedString(attributedString: NSAttributedString(string: "Take me there with  ", attributes:[NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0), NSAttributedStringKey.foregroundColor: UIColor.white]))
         let imageAttachment = NSTextAttachment()
         let image = #imageLiteral(resourceName: "taxibeatLogo").maskWithColor(color: UIColor.white)?.resizedImageWithinRect(rectSize: CGSize(width: 80, height: 15.8))
         imageAttachment.image = image
@@ -103,7 +102,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
     @IBAction func taxibeatButtonTapped(_ sender: Any) {
         guard let taxibeatURL = URL(string: "taxibeat://") else { return }
         if UIApplication.shared.canOpenURL(taxibeatURL) == true {
-            UIApplication.shared.openURL(taxibeatURL)
+            UIApplication.shared.open(taxibeatURL, options: [:], completionHandler: nil)
         } else {
             openStoreProductPage(iTunesIdentifier: "436031420")
         }

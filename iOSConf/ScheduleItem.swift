@@ -34,7 +34,7 @@ public struct ScheduleItem {
         }
         
         self.timeString = theTimeString
-        self.hasSpeaker = Bool(itHasSpeaker as NSNumber)
+        self.hasSpeaker = Bool(truncating: itHasSpeaker as NSNumber)
         self.weight = theWeight
     }
 }

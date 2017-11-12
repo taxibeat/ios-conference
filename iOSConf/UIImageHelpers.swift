@@ -12,10 +12,10 @@ extension String {
     
     func image(fontSize: CGFloat) -> UIImage? {
         let font = UIFont(name: "taxibeat", size: fontSize)
-        let size = (self as NSString).size(attributes: [NSFontAttributeName: font!])
+        let size = (self as NSString).size(withAttributes: [NSAttributedStringKey.font: font!])
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         
-        self.draw(at: CGPoint(x: 0.0, y: 0.0), withAttributes: [NSFontAttributeName: font!])
+        self.draw(at: CGPoint(x: 0.0, y: 0.0), withAttributes: [NSAttributedStringKey.font: font!])
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

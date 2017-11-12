@@ -113,7 +113,7 @@ class LaunchViewController: ConferenceViewController {
         }) { (finished) in
         }
         
-        self.logoVerticalAlignConstraint.constant = 73.5 - UIScreen.main.bounds.size.height/2
+        self.logoVerticalAlignConstraint.constant = 53.5 + self.calculateProperTopPaddingForAnimations() - UIScreen.main.bounds.size.height/2
         UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
             self.logoImageView.transform = CGAffineTransform(scaleX: 0.49, y: 0.49)
             self.view.layoutIfNeeded()
@@ -122,6 +122,13 @@ class LaunchViewController: ConferenceViewController {
         }
     }
     
+    func calculateProperTopPaddingForAnimations() -> CGFloat {
+        if UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436 {
+            return 44.0
+        } else {
+            return 20.0
+        }
+    }
     
     // MARK: - Navigation
     

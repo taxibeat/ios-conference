@@ -95,7 +95,9 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        initialAnimation()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            self.initialAnimation()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -114,9 +116,8 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     // MARK: Initial animation
     
     func initialAnimation() {
-        tableViewToLogoVerticalSpaceConstraint.constant = logoToTableDefaultConstraintConstant
-        
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+            self.tableViewToLogoVerticalSpaceConstraint.constant = self.logoToTableDefaultConstraintConstant
             self.view.layoutIfNeeded()
         }) { (completed) in
         }

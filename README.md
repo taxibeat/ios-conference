@@ -3,7 +3,7 @@ iOS.Conf by Taxibeat app ⌚️📱
 
 ##Requirements for running the project
 In order to build and run the project you need:
-* Xcode 8
+* Xcode 9
 * A paid membership in the Apple developer program
 
 ## Steps for configuring CloudKit

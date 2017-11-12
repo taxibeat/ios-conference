@@ -321,7 +321,7 @@ class ScheduleViewController: ConferenceViewController, UITableViewDelegate, UIT
     
     func openSponsor(urlString: String) {
         guard let url = URL(string: urlString) else { return }
-        let safariVC = SFSafariViewController(url: url, entersReaderIfAvailable: false)
+        let safariVC = SFSafariViewController(url: url)
         safariVC.delegate = self
         safariVC.modalPresentationStyle = .overCurrentContext
         self.present(safariVC, animated: true, completion: nil)

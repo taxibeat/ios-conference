@@ -103,7 +103,7 @@ class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductVi
     @IBAction func taxibeatButtonTapped(_ sender: Any) {
         guard let taxibeatURL = URL(string: "taxibeat://") else { return }
         if UIApplication.shared.canOpenURL(taxibeatURL) == true {
-            UIApplication.shared.openURL(taxibeatURL)
+            UIApplication.shared.open(taxibeatURL, options: [:], completionHandler: nil)
         } else {
             openStoreProductPage(iTunesIdentifier: "436031420")
         }

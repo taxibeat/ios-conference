@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import StoreKit
-import TBConfFramework
 
 class VenueViewController: UIViewController, MKMapViewDelegate, SKStoreProductViewControllerDelegate {
 

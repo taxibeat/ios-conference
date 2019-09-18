@@ -30,37 +30,7 @@ class InterfaceController: WKInterfaceController {
             if error != nil {
                 self.fetchDataLabel.setText("Something went wrong")
             } else {
-                if let theTalks = talks {
-                    self.talksArray = theTalks
-                    
-                    var rowTypes = [String]()
-                    for talk in theTalks {
-                        if talk.hasSpeaker == true {
-                            rowTypes.append(ScheduleTableRowType.scheduleRow.rawValue)
-                        } else {
-                            rowTypes.append(ScheduleTableRowType.noSpeakerRow.rawValue)
-                        }
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.fetchDataLabel.setAlpha(0.0)
-                        self.scheduleTable.setRowTypes(rowTypes)
-                        for (index, value) in self.talksArray.enumerated() {
-                            if value.hasSpeaker == true {
-                                if let row = self.scheduleTable.rowController(at: index) as? ScheduleRowController {
-                                    row.talkSpeakerLabel.setText(value.speakerName)
-                                    row.talkTimeLabel.setText(value.timeString)
-                                    row.talkTitleLabel.setText(value.description)
-                                }
-                            } else {
-                                if let row = self.scheduleTable.rowController(at: index) as? TalkRowController {
-                                    row.talkTime.setText(value.timeString)
-                                    row.talkTitle.setText(value.description)
-                                }
-                            }
-                        }
-                    }
-                }
+                
             }
         }
     }

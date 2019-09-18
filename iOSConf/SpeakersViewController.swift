@@ -50,6 +50,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func showConnectionErrorAlert(_ error: Error?) {
+        
         let alert = UIAlertController(title: "Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "ΟΚ", style: .cancel) { (action) in
             
@@ -66,9 +67,11 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     // MARK: - Table view delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         if speakers == nil {
             return 0
         }
+        
         return speakers!.count
     }
     

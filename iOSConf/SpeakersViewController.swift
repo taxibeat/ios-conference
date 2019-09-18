@@ -67,8 +67,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if speakers == nil {
-            return 0
-        }
+            return 0 }
         return speakers!.count
     }
     
@@ -77,6 +76,13 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        
+        
+        
+        
         let speaker = self.speakers?[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "speakerCell", for: indexPath) as! SpeakerTableViewCell
         
@@ -95,8 +101,7 @@ class SpeakersViewController: ConferenceViewController, UITableViewDelegate, UIT
         cell.speakerPosition.text = speaker?.position
         cell.speakerBio.text = speaker?.bio
         
-        return cell
-    }
+        return cell}
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
